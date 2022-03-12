@@ -4,7 +4,20 @@
   width: 100%;
   height: 5rem;
   align-items: center;
-  background: transparent;
+  /*background: transparent;*/
+  background: #666;
+  animation: nav-appear 1s ease-out forwards;
+}
+
+@keyframes nav-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav ul {
@@ -17,6 +30,7 @@
 .nav li {
   margin: 0 1.5rem;
   font-size: 1.25rem;
+  font-family: "Work Sans", Arial, sans-serif;
 }
 
 .nav a {
@@ -27,4 +41,11 @@
 .nav a:hover,
 .nav a:active {
   color: #fff;
+}
+
+/*.nav a*/
+
+.nav .active {
+  background-color: aqua;
+  color: red;
 }
