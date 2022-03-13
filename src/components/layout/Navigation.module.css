@@ -4,8 +4,8 @@
   width: 100%;
   height: 5rem;
   align-items: center;
-  /*background: transparent;*/
-  background: #666;
+  background: transparent;
+  /*background: #666;*/
   animation: nav-appear 1s ease-out forwards;
 }
 
@@ -29,13 +29,20 @@
 
 .nav li {
   margin: 0 1.5rem;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   font-family: "Work Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nav li {
+    font-size: 1.25rem;
+  }
 }
 
 .nav a {
   text-decoration: none;
-  color: #C6C6C6;
+  color: #bebebe;
 }
 
 .nav a:hover,

@@ -1,29 +1,31 @@
 import {NavLink, NavLinkProps} from 'react-router-dom';
 import classes from './Navigation.module.css';
 
-// <NavLink className={navData =>
-//     "nav " + (navData.isActive ? "active" : "")
-// } to='/welcome'>Home</NavLink>
-
 const Navigation = () => {
+
+    const activeStyle = ({isActive}: any) => ({
+        borderBottom: isActive ? '2px solid #fff' : ''
+    })
 
     return (
         <header>
             <nav className={classes.nav}>
                 <ul>
                     <li>
-                        <NavLink style={({isActive}) => ({borderBottom: isActive ? '2px solid #fff' : ''})}
+                        <NavLink style={activeStyle}
                                  to='/welcome'>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink style={({isActive}) => ({borderBottom: isActive ? '2px solid #fff' : ''})}
+                        <NavLink style={activeStyle}
                                  to='/about-me'>About me</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/food-demo'>Food Demo</NavLink>
+                        <NavLink style={activeStyle}
+                                 to='/food-demo'>Food Demo</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/covid-demo'>Covid Demo</NavLink>
+                        <NavLink style={activeStyle}
+                                 to='/covid-demo'>Covid Demo</NavLink>
                     </li>
                 </ul>
             </nav>
