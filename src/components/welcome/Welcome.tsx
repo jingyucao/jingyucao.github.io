@@ -1,9 +1,9 @@
-import background from './background.jpg';
+import background from './image/background.jpg';
 import classes from './Welcome.module.css';
-import linkedinLogo from './linkedin-logo.png';
-import linkedinBlueLogo from './linkedin-blue.png';
-import githubLogo from './github-icon.png';
-import githubGirlLogo from './github-girl.png';
+import linkedinLogo from './image/linkedin-logo.png';
+import linkedinBlueLogo from './image/linkedin-blue.png';
+import githubLogo from './image/github-icon.png';
+import githubGirlLogo from './image/github-girl.png';
 
 const Welcome = () => {
     return (

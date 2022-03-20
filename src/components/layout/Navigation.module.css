@@ -42,12 +42,12 @@
 
 .nav a {
   text-decoration: none;
-  color: #bebebe;
+  color: #999;
 }
 
 .nav a:hover,
 .nav a:active {
-  color: #fff;
+  color: #fff !important
 }
 
 /*.nav a*/
