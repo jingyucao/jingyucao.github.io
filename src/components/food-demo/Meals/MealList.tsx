@@ -16,19 +16,22 @@ const MealList = () => {
 
     const fetchMealsHandler = useCallback(async () => {
         try {
-            const response = await fetch('https://react-website-2022-default-rtdb.europe-west1.firebasedatabase.app/meals/makis.json')
+            const response = await fetch('https://react-website-2022-default-rtdb.europe-west1.firebasedatabase.app/meals.json')
             if (!response.ok) {
                 throw new Error('Something went wrong!')
             }
             const data = await response.json();
+
+            const makiData = await data.makis;
+
             const loadedMeals = [] as Meal[];
-            for (const key in data) {
+            for (const key in makiData) {
                 loadedMeals.push(
                     {
                         id: key,
-                        name: data[key].name,
-                        description: data[key].description,
-                        price: data[key].price.toFixed(2)
+                        name: makiData[key].name,
+                        description: makiData[key].description,
+                        price: makiData[key].price.toFixed(2)
                     }
                 )
             }
@@ -42,19 +45,25 @@ const MealList = () => {
         fetchMealsHandler()
     }, [fetchMealsHandler])
 
-    const mealContent = meals.map((meal: Meal) =>
-        <MealItem
-            id={meal.id}
-            key={meal.id}
-            name={meal.name}
-            description={meal.description}
-            price={meal.price}/>
-    )
+    let content:any = <p>Found no Meals.</p>
+    if (error) {
+        content = <p>{error}</p>
+    }
+    if (meals.length > 0) {
+        content = meals.map((meal: Meal) =>
+            <MealItem
+                id={meal.id}
+                key={meal.id}
+                name={meal.name}
+                description={meal.description}
+                price={meal.price}/>
+        )
+    }
 
     return (
         <div className={classes.card}>
             <ul>
-                {mealContent}
+                {content}
             </ul>
         </div>
     )
