@@ -1,4 +1,5 @@
 import classes from './MealItem.module.css';
+import MealItemForm from "./MealItemForm";
 
 const MealItem = (props: any) => {
     return (
@@ -7,6 +8,9 @@ const MealItem = (props: any) => {
                 <h3>{props.name}</h3>
                 <div className={classes['mealItem_description']}>{props.description}</div>
                 <div className={classes['mealItem_price']}>€ {props.price}</div>
+            </div>
+            <div>
+                <MealItemForm id={props.id} />
             </div>
         </li>
     )

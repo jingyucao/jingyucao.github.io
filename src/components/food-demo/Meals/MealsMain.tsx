@@ -1,7 +1,7 @@
 import MealTab from "./MealTab";
 import {useCallback, useEffect, useState} from "react";
 import MealList from "./MealList";
-import classes from "./Meals.module.css";
+import Card from '../UI/Card';
 
 type Meal = {
     id: string,
@@ -10,7 +10,7 @@ type Meal = {
     price: number
 }
 
-const Meals = () => {
+const MealsMain = () => {
 
     const [meals, setMeals] = useState([] as Meal[]);
     const [error, setError] = useState(null);
@@ -61,14 +61,14 @@ const Meals = () => {
     }
 
     return (
-        <div className={classes.main}>
+        <div style={{width:'100%'}}>
             <MealTab onChooseMeal={chooseMealHandler}/>
-            <div className={classes.card}>
+            <Card style={{width:'50%'}}>
                 {content}
-            </div>
+            </Card>
         </div>
 
     )
 }
 
-export default Meals;
+export default MealsMain;

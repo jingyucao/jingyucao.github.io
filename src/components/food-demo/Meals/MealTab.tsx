@@ -18,7 +18,7 @@ const MealTab = (props: any) => {
                 </div>
             </button>
             <button className={classes.tabItem} onClick={props.onChooseMeal} id='uramakis'>
-                Ura-maki
+                Uramaki
                 <div className={classes.tabItemQuantity}>
                     (4 pieces)
                 </div>

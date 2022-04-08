@@ -1,5 +1,5 @@
-import classes from "./MealList.module.css";
-import MealItem from "./MealItem";
+import MealItem from "./MealItem/MealItem";
+import React from "react";
 
 type Meal = {
     id: string,
@@ -8,9 +8,15 @@ type Meal = {
     price: number
 }
 
-const MealList = (props:any) => {
+const MealList: React.FC<{ meals: Meal[] }> = (props) => {
 
-    const content=props.meals.map((meal: Meal) =>
+    const ulStyle = {
+        listStyle: "none",
+        padding: "0",
+        margin: "0",
+    }
+
+    const content = props.meals.map((meal: Meal) =>
         <MealItem
             id={meal.id}
             key={meal.id}
@@ -20,8 +26,8 @@ const MealList = (props:any) => {
     )
 
     return (
-        <div className={classes.card}>
-            <ul>
+        <div>
+            <ul style={ulStyle}>
                 {content}
             </ul>
         </div>
