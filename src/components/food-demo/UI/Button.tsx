@@ -1,15 +1,15 @@
-import classes from './ItemButton.module.css';
-import React from "react";
+import classes from './Button.module.css';
+import React, {MouseEventHandler} from "react";
 
 interface Props {
     type: "button" | "submit" | "reset";
-    onClick?: any;
+    onClick?: MouseEventHandler;
     disabled?: any;
     className?: string;
     children: string;
 }
 
-const ItemButton: React.FC<Props> = (props) => {
+const Button: React.FC<Props> = (props) => {
     return (
         <div>
             <button
@@ -24,4 +24,4 @@ const ItemButton: React.FC<Props> = (props) => {
     )
 }
 
-export default ItemButton;
+export default Button;

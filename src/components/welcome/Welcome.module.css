@@ -17,11 +17,11 @@
 }
 
 @keyframes welcome-appear {
-  from{
-    opacity:0;
+  from {
+    opacity: 0;
     transform: translateY(3rem);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -117,5 +117,6 @@
 .logoCard:hover .linkedinLogoItem {
   display: none;
 }
+
 
 

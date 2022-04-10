@@ -7,7 +7,8 @@ const Introduction = () => {
         textAlign: 'center',
         fontSize:'0.8rem',
         padding:'0.1rem 1rem',
-        color:'#666'
+        color:'#666',
+        marginTop:'-1rem'
     }
 
     return (

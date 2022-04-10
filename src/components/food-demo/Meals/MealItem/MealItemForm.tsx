@@ -1,5 +1,5 @@
-import ItemInput from "./UI/ItemInput";
-import ItemButton from "./UI/ItemButton";
+import ItemInput from "./ItemInput";
+import Button from "../../UI/Button";
 import React, {useRef, useState} from "react";
 
 const MealItemForm = (props: any) => {
@@ -35,7 +35,7 @@ const MealItemForm = (props: any) => {
                     max: '5',
                     defaultValue: '1'
                 }}/>
-            <ItemButton type='submit'>+ Add</ItemButton>
+            <Button type='submit'>+ Add</Button>
             {!amountIsValid && <p>Please enter a valid amount (1-5)</p>}
         </form>
     )

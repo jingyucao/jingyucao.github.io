@@ -1,14 +1,16 @@
 .button {
-  font: inherit;
   border: 1px solid #ccc;
   background-color: rgba(255, 255, 255, 0.7);
-  padding: 0.1rem 1.5rem 0.1rem 1rem;
+  padding: 0.1rem;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 0.5rem;
+  position: sticky;
+  top: 45vh;
+  left: 80vw;
 }
 
 .button:hover,
@@ -22,8 +24,8 @@
 }
 
 .icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
   margin: 0.5rem;
 }
 
