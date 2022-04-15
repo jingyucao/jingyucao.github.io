@@ -2,28 +2,48 @@ import Modal from '../UI/Modal';
 import Button from '../UI/Button';
 import classes from './Cart.module.css';
 import CartItem from "./CartItem";
-import {useContext} from "react";
+import React, {useContext} from "react";
 import CartContext from "../store/CartContext";
-import {cartItemType} from "../store/CartProvider"
+import {cartItemType} from "../store/CartProvider";
 
-const Cart = (props: any) => {
+interface Props {
+    onShowCart: () => void,
+    onHideCart: () => void
+}
 
-    const cartCtx=useContext(CartContext);
-    console.log(cartCtx.items)
+const Cart: React.FC<Props> = (props) => {
 
-    const items: cartItemType[] = [
-        {id: 'ma1', name: 'maki1', amount: 1, price: 11.375},
-        {id: 'ma2', name: 'maki2', amount: 1, price: 11.325}
-    ]
+    const cartCtx = useContext(CartContext);
 
-    const cartItems = (
+    const totalPrice = cartCtx.totalPrice.toFixed(2);
+    const hasItems = cartCtx.items.length > 0;
+
+    console.log(cartCtx.items);
+    console.log(cartCtx.addItem);
+
+    const cartItemAddHandler = (item: cartItemType) => {
+        cartCtx.addItem({
+            id:item.id,
+            name:item.name,
+            amount:1,
+            price:item.price
+        })
+    }
+
+    const cartItemRemoveHandler = (id: any) => {
+    }
+
+
+    const cartItemsContent = (
         <ul className={classes['cart-item']}>
-            {items.map((item) => (
+            {cartCtx.items.map((item) => (
                     <CartItem key={item.id}
                               id={item.id}
                               name={item.name}
                               amount={item.amount}
                               price={item.price}
+                              onAddItem={cartItemAddHandler.bind(null, item)}
+                              onRemoveItem={cartItemRemoveHandler.bind(null, item.id)}
                     />
                 )
             )}
@@ -32,15 +52,15 @@ const Cart = (props: any) => {
 
     return (
         <Modal onHideCart={props.onHideCart}>
-            {cartItems}
+            {cartItemsContent}
             <div>
                 <div className={classes.total}>
                     <span>Total Price</span>
-                    <span>35.63</span>
+                    <span>€ {totalPrice}</span>
                 </div>
                 <div className={classes.action}>
                     <Button type='button' className={classes['button--alt']} onClick={props.onHideCart}>Close</Button>
-                    <Button type='button'>Order</Button>
+                    {hasItems && <Button type='button'>Order</Button>}
                 </div>
             </div>
         </Modal>

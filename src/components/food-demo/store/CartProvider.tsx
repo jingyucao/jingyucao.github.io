@@ -1,5 +1,5 @@
 import CartContext from "./CartContext";
-import React, {useReducer} from "react";
+import React, {MouseEventHandler, useReducer} from "react";
 import {cartContextType} from "./CartContext";
 
 export type cartItemType = {
@@ -7,7 +7,10 @@ export type cartItemType = {
     name: string,
     amount: number,
     price: number,
+    onAddItem?: MouseEventHandler | undefined
+    onRemoveItem?: (id: string) => void
 }
+
 
 interface cartActionType {
     type: string,
@@ -25,9 +28,31 @@ const defaultCartState: cartContextType = {
 };
 
 const cartReducer: any = (state: cartStateType, action: cartActionType) => {
+
     if (action.type === 'ADD') {
-        const updatedItems = state.items.concat(action.item);
+
         const updatedTotalPrice = state.totalPrice + action.item.price * action.item.amount;
+
+        const existingCartItemIndex: number = state.items.findIndex(
+            (item) => item.id === action.item.id)
+        ;
+
+        const existingCartItem: cartItemType = state.items[existingCartItemIndex];
+
+        let updatedItems: cartItemType[];
+
+        if (existingCartItem) {
+            const updatedItem: cartItemType = {
+                ...existingCartItem,
+                amount: existingCartItem.amount + action.item.amount
+            };
+            updatedItems = [...state.items];
+            updatedItems[existingCartItemIndex] = updatedItem;
+        } else {
+            updatedItems = state.items.concat(action.item);
+        }
+
+
         return {
             items: updatedItems,
             totalPrice: updatedTotalPrice
