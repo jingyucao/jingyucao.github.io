@@ -2,7 +2,12 @@ import ItemInput from "./ItemInput";
 import Button from "../../UI/Button";
 import React, {useRef, useState} from "react";
 
-const MealItemForm = (props: any) => {
+interface Props {
+    id: string,
+    onAddToCart: (amount: number) => void;
+}
+
+const MealItemForm = (props: Props) => {
 
     const [amountIsValid, setAmountIsValid] = useState(true);
 
@@ -10,8 +15,8 @@ const MealItemForm = (props: any) => {
 
     const submitHandler: React.FormEventHandler<HTMLFormElement> = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const enteredAmount: String = amountInputRef.current.value;
-        const enteredAmountNumber: Number = +enteredAmount;
+        const enteredAmount: string = amountInputRef.current.value;
+        const enteredAmountNumber: number = +enteredAmount;
 
         if (enteredAmount.trim().length === 0 ||
             enteredAmountNumber < 1 ||
@@ -20,7 +25,8 @@ const MealItemForm = (props: any) => {
             return
         }
 
-        console.log(enteredAmountNumber)
+        props.onAddToCart(enteredAmountNumber);
+
     }
 
     return (

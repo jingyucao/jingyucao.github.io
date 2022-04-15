@@ -1,4 +1,4 @@
-import {NavLink, NavLinkProps} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import classes from './Navigation.module.css';
 
 const Navigation = () => {

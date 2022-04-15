@@ -1,10 +1,11 @@
 import classes from "./FoodDemo.module.css";
 import background from "./image/sushi.png";
-import React, {Fragment, useState} from "react";
+import React, {useState} from "react";
 import MealsMain from "./Meals/MealsMain";
 import Introduction from "./Introduction";
 import CartButton from "./Cart/CartButton";
 import Cart from "./Cart/Cart";
+import CartProvider from "./store/CartProvider";
 
 const FoodDemo = () => {
 
@@ -18,7 +19,7 @@ const FoodDemo = () => {
     }
 
     return (
-        <Fragment>
+        <CartProvider>
             {cartIsShown && <Cart onShowCart={showCartHandler} onHideCart={hideCartHandler}/>}
             <CartButton onShowCart={showCartHandler}/>
             <div className={classes.foodDemo}>
@@ -26,7 +27,7 @@ const FoodDemo = () => {
                 <Introduction/>
                 <MealsMain/>
             </div>
-        </Fragment>
+        </CartProvider>
     )
 }
 

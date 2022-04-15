@@ -2,15 +2,14 @@ import Modal from '../UI/Modal';
 import Button from '../UI/Button';
 import classes from './Cart.module.css';
 import CartItem from "./CartItem";
-
-export type cartItemType = {
-    id: string,
-    name: string,
-    amount: number,
-    price: number
-}
+import {useContext} from "react";
+import CartContext from "../store/CartContext";
+import {cartItemType} from "../store/CartProvider"
 
 const Cart = (props: any) => {
+
+    const cartCtx=useContext(CartContext);
+    console.log(cartCtx.items)
 
     const items: cartItemType[] = [
         {id: 'ma1', name: 'maki1', amount: 1, price: 11.375},
@@ -36,7 +35,7 @@ const Cart = (props: any) => {
             {cartItems}
             <div>
                 <div className={classes.total}>
-                    <span>Total Amount</span>
+                    <span>Total Price</span>
                     <span>35.63</span>
                 </div>
                 <div className={classes.action}>

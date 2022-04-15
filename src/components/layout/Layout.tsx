@@ -1,12 +1,10 @@
 import {Fragment} from "react";
 import Navigation from "./Navigation";
-import classes from './Layout.module.css';
-import background from './background.jpg';
 
 const Layout = (props: any) => {
     return (
         <Fragment>
-            <div className={classes.page}>
+            <div>
                 <Navigation/>
                 <div>
                     {props.children}

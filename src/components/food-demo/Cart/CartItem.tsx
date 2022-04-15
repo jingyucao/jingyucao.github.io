@@ -1,7 +1,12 @@
 import classes from './CartItem.module.css';
-import {cartItemType} from "./Cart";
+import {cartItemType} from "../store/CartProvider";
 
 const CartItem = (props: cartItemType) => {
+
+    // const cartCtx = useContext(CartContext);
+    // const cartItemAddHandler = (item: any) => {
+    //     cartCtx.addItem();
+    // }
 
     const price = `€ ${props.price.toFixed(2)}`
 

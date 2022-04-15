@@ -47,12 +47,6 @@
 
 .nav a:hover,
 .nav a:active {
-  color: #fff !important
+  color: #FAFAFA !important
 }
 
-/*.nav a*/
-
-.nav .active {
-  background-color: aqua;
-  color: red;
-}

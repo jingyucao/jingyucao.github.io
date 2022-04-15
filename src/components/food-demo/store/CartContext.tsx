@@ -1,12 +1,21 @@
 import React from "react";
+import {cartItemType} from "./CartProvider";
 
-const CartContext = React.createContext(
+export type cartContextType = {
+    items: cartItemType[],
+    totalPrice: number,
+    addItem?: any,
+    removeItem?: any
+    // clearItem?: (c: string) => void
+}
+
+const CartContext = React.createContext<cartContextType>(
     {
         items: [],
-        totalAmount: 0,
-        addItem: ()=>{},
+        totalPrice: 0,
+        addItem: (item:cartItemType)=>{},
         removeItem: () => {},
-        clearItem: () => {}
+        // clearItem: () => {}
     }
 )
 
