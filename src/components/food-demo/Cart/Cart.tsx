@@ -18,9 +18,6 @@ const Cart: React.FC<Props> = (props) => {
     const totalPrice = cartCtx.totalPrice.toFixed(2);
     const hasItems = cartCtx.items.length > 0;
 
-    console.log(cartCtx.items);
-    console.log(cartCtx.addItem);
-
     const cartItemAddHandler = (item: cartItemType) => {
         cartCtx.addItem({
             id:item.id,
@@ -30,7 +27,8 @@ const Cart: React.FC<Props> = (props) => {
         })
     }
 
-    const cartItemRemoveHandler = (id: any) => {
+    const cartItemRemoveHandler = (id:string) => {
+        cartCtx.removeItem(id)
     }
 
 

@@ -7,14 +7,14 @@ export type cartItemType = {
     name: string,
     amount: number,
     price: number,
-    onAddItem?: MouseEventHandler | undefined
-    onRemoveItem?: (id: string) => void
+    onAddItem?: MouseEventHandler,
+    onRemoveItem?: MouseEventHandler
 }
-
 
 interface cartActionType {
     type: string,
-    item: cartItemType
+    item: cartItemType,
+    id?: string
 }
 
 interface cartStateType {
@@ -52,12 +52,38 @@ const cartReducer: any = (state: cartStateType, action: cartActionType) => {
             updatedItems = state.items.concat(action.item);
         }
 
+        return {
+            items: updatedItems,
+            totalPrice: updatedTotalPrice
+        }
+    }
+
+    if (action.type === 'REMOVE') {
+
+        const existingCartItemIndex: number = state.items.findIndex(
+            (item) => item.id === action.id
+        );
+        const existingCartItem = state.items[existingCartItemIndex];
+        const updatedTotalPrice = state.totalPrice - state.items[existingCartItemIndex].price;
+
+        let updatedItems: cartItemType[];
+        if (existingCartItem.amount === 1) {
+            updatedItems = state.items.filter(item => item.id !== action.id)
+        } else {
+            const updatedItem: cartItemType = {
+                ...existingCartItem,
+                amount: existingCartItem.amount - 1
+            };
+            updatedItems = [...state.items];
+            updatedItems[existingCartItemIndex] = updatedItem;
+        }
 
         return {
             items: updatedItems,
             totalPrice: updatedTotalPrice
         }
     }
+
     return defaultCartState;
 }
 
