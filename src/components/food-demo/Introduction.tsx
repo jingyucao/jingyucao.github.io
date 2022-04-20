@@ -8,7 +8,8 @@ const Introduction = () => {
         fontSize:'0.8rem',
         padding:'0.1rem 1rem',
         color:'#666',
-        marginTop:'-1rem'
+        top:'1rem',
+        position:'absolute'
     }
 
     return (

@@ -2,6 +2,7 @@ import MealTab from "./MealTab";
 import {useCallback, useEffect, useState} from "react";
 import MealList from "./MealList";
 import Card from '../UI/Card';
+import classes from './MealsMain.module.css';
 
 type Meal = {
     id: string,
@@ -18,7 +19,6 @@ const MealsMain = () => {
 
     const chooseMealHandler = (event: any) => {
         setMealCategory(event.target.id)
-        console.log(mealCategory)
     }
 
     const fetchMealsHandler = useCallback(async () => {
@@ -61,7 +61,7 @@ const MealsMain = () => {
     }
 
     return (
-        <div style={{width: '100%'}}>
+        <div className={classes.main}>
             <MealTab onChooseMeal={chooseMealHandler}/>
             <Card style={{width: '50%'}}>
                 {content}

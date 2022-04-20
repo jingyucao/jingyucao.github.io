@@ -21,12 +21,14 @@ const FoodDemo = () => {
     return (
         <CartProvider>
             {cartIsShown && <Cart onShowCart={showCartHandler} onHideCart={hideCartHandler}/>}
-            <CartButton onShowCart={showCartHandler}/>
-            <div className={classes.foodDemo}>
-                <img className={classes.bgImg} src={background} alt="background"/>
-                <Introduction/>
-                <MealsMain/>
-            </div>
+                <div className={classes.foodDemo}>
+                    <CartButton onShowCart={showCartHandler}/>
+                    <img className={classes.bgImg} src={background} alt="background"/>
+                    <Introduction/>
+                    <MealsMain/>
+                </div>
+
+
         </CartProvider>
     )
 }
