@@ -14,5 +14,6 @@
   width: 2.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding-left: 0.25rem;
+  padding-left: 0.5rem;
+  font:inherit;
 }

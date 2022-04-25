@@ -82,6 +82,7 @@
   display: grid;
   place-content: center;
   margin: auto;
+  font:inherit;
 }
 
 .button:hover .quantity,

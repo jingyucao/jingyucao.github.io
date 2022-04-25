@@ -1,0 +1,62 @@
+.form {
+  border-top: 1px solid #fafafa;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  max-height: 20rem;
+  overflow: auto;
+  padding-bottom: 0.5rem;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.control input {
+  font: inherit;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 20rem;
+  max-width: 100%;
+  padding-left: 0.3rem;
+}
+
+.control p {
+  color: #666;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.button--alt {
+  background-color: #fafafa;
+  color: #B08401;
+  margin-right: 0.5rem;
+}
+
+.button--alt:hover,
+.button--alt:active {
+  background: #d4ab31;
+  border-color: #d4ab31;
+  color: #fafafa;
+}
+
+.invalid label {
+  color: #b94571;
+}
+
+.invalid input {
+  border-color: #b94571;
+  background-color: #fafafa;
+}

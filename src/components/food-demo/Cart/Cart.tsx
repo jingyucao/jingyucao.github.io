@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import React, {useContext} from "react";
 import CartContext from "../store/CartContext";
 import {cartItemType} from "../store/CartProvider";
+import Checkout from "./Checkout";
 
 interface Props {
     onShowCart: () => void,
@@ -20,14 +21,14 @@ const Cart: React.FC<Props> = (props) => {
 
     const cartItemAddHandler = (item: cartItemType) => {
         cartCtx.addItem({
-            id:item.id,
-            name:item.name,
-            amount:1,
-            price:item.price
+            id: item.id,
+            name: item.name,
+            amount: 1,
+            price: item.price
         })
     }
 
-    const cartItemRemoveHandler = (id:string) => {
+    const cartItemRemoveHandler = (id: string) => {
         cartCtx.removeItem(id)
     }
 
@@ -61,6 +62,7 @@ const Cart: React.FC<Props> = (props) => {
                     {hasItems && <Button type='button'>Order</Button>}
                 </div>
             </div>
+            <Checkout/>
         </Modal>
     )
 }
