@@ -1,10 +1,9 @@
 .form {
   border-top: 1px solid #fafafa;
   margin-top: 1rem;
-  padding-top: 1rem;
+  padding: 1rem 1rem 0 1rem;
   max-height: 20rem;
   overflow: auto;
-  padding-bottom: 0.5rem;
 }
 
 .control {
@@ -20,11 +19,11 @@
 .control input {
   font: inherit;
   font-size: 0.8rem;
-  border: 1px solid #ccc;
+  border: 1px solid #fafafa;
   border-radius: 3px;
   width: 20rem;
   max-width: 100%;
-  padding-left: 0.3rem;
+  padding: 0.15rem 0 0.15rem 0.3rem
 }
 
 .control p {
@@ -35,8 +34,8 @@
 
 .actions {
   display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
+  justify-content: end;
+  margin: 1rem -1rem 0.75rem 0;
 }
 
 .button--alt {

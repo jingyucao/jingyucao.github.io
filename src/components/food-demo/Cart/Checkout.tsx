@@ -1,14 +1,24 @@
 import classes from './Checkout.module.css';
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import Button from '../UI/Button';
 
 const Checkout = () => {
+
+    const inputIsEmpty = (value: any) => value.trim() === '';
+    const plzIsValid = (value: any) =>
+        value.trim().length === 5 && typeof (+value) === 'number'
+
+    const [inputIsValid, setInputIsValid] = useState({
+        name: true,
+        address: true,
+        plz: true,
+        city: true
+    })
 
     const nameInputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
     const addressInputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
     const plzInputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
     const cityInputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
-
 
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault();
@@ -16,15 +26,26 @@ const Checkout = () => {
         const enteredAddress = addressInputRef.current.value;
         const enteredPLZ = plzInputRef.current.value;
         const enteredCity = cityInputRef.current.value;
-        console.log(enteredName, enteredAddress, enteredPLZ, enteredCity)
 
+        const nameInputIsValid = !inputIsEmpty(enteredName);
+        const addressInputIsValid = !inputIsEmpty(enteredAddress);
+        const plzInputIsValid = plzIsValid(enteredPLZ);
+        const cityInputIsValid = !inputIsEmpty(enteredCity);
+
+        setInputIsValid({
+            name: nameInputIsValid,
+            address: addressInputIsValid,
+            plz: plzInputIsValid,
+            city: cityInputIsValid
+        })
     }
 
     return (
         <form className={classes.form} onSubmit={submitHandler}>
-            <div className={classes.control}>
+            <div className={`${classes.control} ${inputIsValid.name ? "" : classes.invalid}`}>
                 <label htmlFor="name">Your Name</label>
                 <input type="text" id="name" ref={nameInputRef}/>
+                {inputIsValid.name ? '' : <p className={classes.invalid}>* Name should not be empty.</p>}
             </div>
             <div className={classes.control}>
                 <label htmlFor="address">Address</label>

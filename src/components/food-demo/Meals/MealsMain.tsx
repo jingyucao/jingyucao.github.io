@@ -25,7 +25,7 @@ const MealsMain = () => {
         try {
             const response = await fetch(`https://react-website-2022-default-rtdb.europe-west1.firebasedatabase.app/meals/${mealCategory}.json`)
             if (!response.ok) {
-                throw new Error('Something went wrong!')
+                throw new Error('Something went wrong to load the menu!')
             }
             const data = await response.json();
 
