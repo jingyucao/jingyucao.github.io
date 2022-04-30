@@ -4,6 +4,14 @@
   padding: 1rem 1rem 0 1rem;
   max-height: 20rem;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .control {
@@ -21,10 +29,49 @@
   font-size: 0.8rem;
   border: 1px solid #fafafa;
   border-radius: 3px;
-  width: 20rem;
-  max-width: 100%;
-  padding: 0.15rem 0 0.15rem 0.3rem
+  /*width: 20rem;*/
+  padding: 0.15rem 0 0.15rem 0.3rem;
 }
+
+.control #name {
+  width: 28rem;
+}
+
+.control #city {
+  width: 8rem;
+}
+
+.control #address {
+  width: 28rem;
+}
+
+.control #plz {
+  width: 8rem;
+}
+
+@media (max-width: 768px) {
+  .form .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .control #name {
+    width: 15rem;
+  }
+
+  .control #city {
+    width: 15rem;
+  }
+
+  .control #address {
+    width: 15rem;
+  }
+
+  .control #plz {
+    width: 15rem;
+  }
+}
+
 
 .control p {
   color: #666;

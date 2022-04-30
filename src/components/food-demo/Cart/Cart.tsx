@@ -2,7 +2,7 @@ import Modal from '../UI/Modal';
 import Button from '../UI/Button';
 import classes from './Cart.module.css';
 import CartItem from "./CartItem";
-import React, {useContext} from "react";
+import React, {Fragment, useContext, useState} from "react";
 import CartContext from "../store/CartContext";
 import {cartItemType} from "../store/CartProvider";
 import Checkout from "./Checkout";
@@ -17,7 +17,15 @@ const Cart: React.FC<Props> = (props) => {
     const cartCtx = useContext(CartContext);
 
     const totalPrice = cartCtx.totalPrice.toFixed(2);
+
     const hasItems = cartCtx.items.length > 0;
+
+    const [isCheckout, setIsCheckout] = useState(false)
+
+    const [isUploading, setIsUploading] = useState(false);
+
+    const [didUpload, setDidUpload] = useState(false);
+
 
     const cartItemAddHandler = (item: cartItemType) => {
         cartCtx.addItem({
@@ -31,7 +39,6 @@ const Cart: React.FC<Props> = (props) => {
     const cartItemRemoveHandler = (id: string) => {
         cartCtx.removeItem(id)
     }
-
 
     const cartItemsContent = (
         <ul className={classes['cart-item']}>
@@ -49,8 +56,42 @@ const Cart: React.FC<Props> = (props) => {
         </ul>
     )
 
-    return (
-        <Modal onHideCart={props.onHideCart}>
+    const checkoutHandler = () => {
+        setIsCheckout(true);
+    }
+
+    const cancelCheckoutHandler = () => {
+        setIsCheckout(false);
+    }
+
+    const submitHandler = async (userData: Object) => {
+
+        setIsUploading(true);
+
+        await fetch('https://react-website-2022-default-rtdb.europe-west1.firebasedatabase.app/orders.json',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(
+                    {
+                        items: cartCtx.items,
+                        userData: userData
+                    }
+                )
+            }
+        )
+
+        setIsUploading(false);
+        setDidUpload(true);
+        cartCtx.clearItem();
+    }
+
+    const contentIsUploading = <p>Order is Uploading...</p>
+
+    const contentToBeUpload =
+        <Fragment>
             {cartItemsContent}
             <div>
                 <div className={classes.total}>
@@ -59,10 +100,25 @@ const Cart: React.FC<Props> = (props) => {
                 </div>
                 <div className={classes.action}>
                     <Button type='button' className={classes['button--alt']} onClick={props.onHideCart}>Close</Button>
-                    {hasItems && <Button type='button'>Order</Button>}
+                    {hasItems && <Button type='button' onClick={checkoutHandler}>Order</Button>}
                 </div>
             </div>
-            <Checkout/>
+            {isCheckout && <Checkout onConfirm={submitHandler} onCancel={cancelCheckoutHandler}/>}
+        </Fragment>
+
+    const contentDidUpload =
+        <Fragment>
+            {didUpload && <p>Order is received, we are working on it!</p>}
+            <div className={classes.action}>
+                <Button type='button' className={classes['button--alt']} onClick={props.onHideCart}>Back</Button>
+            </div>
+        </Fragment>
+
+    return (
+        <Modal onHideCart={props.onHideCart}>
+            {isUploading && !didUpload && contentIsUploading}
+            {!didUpload && !isUploading && contentToBeUpload}
+            {didUpload && !isUploading && contentDidUpload}
         </Modal>
     )
 }

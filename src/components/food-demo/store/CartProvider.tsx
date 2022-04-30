@@ -84,6 +84,10 @@ const cartReducer: any = (state: cartStateType, action: cartActionType) => {
         }
     }
 
+    if (action.type === 'CLEAR') {
+        return defaultCartState
+    }
+
     return defaultCartState;
 }
 
@@ -99,12 +103,16 @@ const CartProvider: React.FC = (props) => {
         dispatchCartAction({type: 'REMOVE', id: id})
     }
 
+    const clearItemFromCartHandler = () => {
+        dispatchCartAction({type: 'CLEAR'})
+    }
+
     const cartContext: cartContextType = {
         items: cartState.items,
         totalPrice: cartState.totalPrice,
         addItem: addItemToCartHandler,
         removeItem: removeItemFromCartHandler,
-        // // clearItem: clearItemFromCartHandler
+        clearItem: clearItemFromCartHandler
     }
 
     return (
