@@ -38,7 +38,6 @@ const Content = () => {
 
     return (
         <ul id={classes.contentItems}>
-
             <li className={classes.programming}>
                 <div className={classes.contentTheme}>
                     <img className={classes.icon} src={computerIcon} alt="icon"/>
@@ -46,7 +45,6 @@ const Content = () => {
                 </div>
                 <div className={classes.contentText}>
                     Skills: html, css, javascript, react, typescript, unit-test, storybook ect.
-
                 </div>
             </li>
             <li className={classes.work}>
