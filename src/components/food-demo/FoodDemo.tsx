@@ -26,6 +26,7 @@ const FoodDemo = () => {
                     <img className={classes.bgImg} src={background} alt="background"/>
                     <Introduction/>
                     <MealsMain/>
+                    <input/>
                 </div>
 
 

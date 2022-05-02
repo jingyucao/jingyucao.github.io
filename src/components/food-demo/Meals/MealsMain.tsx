@@ -1,7 +1,7 @@
 import MealTab from "./MealTab";
 import {useCallback, useEffect, useState} from "react";
 import MealList from "./MealList";
-import Card from '../UI/Card';
+import Card from '../../UI/Card';
 import classes from './MealsMain.module.css';
 
 type Meal = {

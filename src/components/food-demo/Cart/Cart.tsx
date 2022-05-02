@@ -1,5 +1,5 @@
-import Modal from '../UI/Modal';
-import Button from '../UI/Button';
+import Modal from '../../UI/Modal';
+import Button from '../../UI/Button';
 import classes from './Cart.module.css';
 import CartItem from "./CartItem";
 import React, {Fragment, useContext, useState} from "react";

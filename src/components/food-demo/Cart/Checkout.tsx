@@ -1,6 +1,6 @@
 import classes from './Checkout.module.css';
-import React, {MouseEventHandler, useRef, useState} from "react";
-import Button from '../UI/Button';
+import React, {useRef, useState} from "react";
+import Button from '../../UI/Button';
 
 interface Prop {
     onConfirm: (userData: Object) => void
