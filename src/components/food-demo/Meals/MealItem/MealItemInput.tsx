@@ -1,4 +1,4 @@
-import classes from "./ItemInput.module.css";
+import classes from "./MealItemInput.module.css";
 import React from "react";
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
     label: string
 }
 
-const ItemInput = React.forwardRef<HTMLInputElement, Props>((props: any, ref) => {
+const MealItemInput = React.forwardRef<HTMLInputElement, Props>((props: any, ref) => {
     return (
         <div className={classes.itemInput}>
             <label htmlFor={props.input.id}>{props.label}</label>
@@ -15,4 +15,4 @@ const ItemInput = React.forwardRef<HTMLInputElement, Props>((props: any, ref) =>
     )
 })
 
-export default ItemInput;
+export default MealItemInput;

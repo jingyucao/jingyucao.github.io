@@ -1,4 +1,4 @@
-import ItemInput from "./ItemInput";
+import MealItemInput from "./MealItemInput";
 import Button from "../../../UI/Button";
 import React, {useRef, useState} from "react";
 
@@ -31,7 +31,7 @@ const MealItemForm = (props: Props) => {
 
     return (
         <form style={{textAlign: "right"}} onSubmit={submitHandler}>
-            <ItemInput
+            <MealItemInput
                 ref={amountInputRef}
                 label='Amount'
                 input={{
