@@ -16,7 +16,7 @@ const Introduction = () => {
         <Card style={introStyle}>
             <p style={{fontWeight: 'bolder'}}>Introduction</p>
             <p>Food Demo is an online delivery website, written with React in Typescript for Frontend and Firebase for
-                Database, styled with Css Module.</p>
+                the database, styled with Css Module. The menu and customer data is fetched and updated using REST. </p>
         </Card>
     )
 }

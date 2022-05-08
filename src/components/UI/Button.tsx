@@ -7,6 +7,7 @@ interface Props {
     disabled?: any;
     className?: string;
     children: string;
+    style?: any
 }
 
 const Button: React.FC<Props> = (props) => {

@@ -8,8 +8,8 @@ import {cartItemType} from "../store/CartProvider";
 import Checkout from "./Checkout";
 
 interface Props {
-    onShowCart: () => void,
-    onHideCart: () => void
+    onShowModal: () => void,
+    onHideModal: () => void
 }
 
 const Cart: React.FC<Props> = (props) => {
@@ -99,7 +99,7 @@ const Cart: React.FC<Props> = (props) => {
                     <span>€ {totalPrice}</span>
                 </div>
                 <div className={classes.action}>
-                    <Button type='button' className={classes['button--alt']} onClick={props.onHideCart}>Close</Button>
+                    <Button type='button' className={classes['button--alt']} onClick={props.onHideModal}>Close</Button>
                     {hasItems && <Button type='button' onClick={checkoutHandler}>Order</Button>}
                 </div>
             </div>
@@ -110,12 +110,12 @@ const Cart: React.FC<Props> = (props) => {
         <Fragment>
             {didUpload && <p>Order is received, we are working on it!</p>}
             <div className={classes.action}>
-                <Button type='button' className={classes['button--alt']} onClick={props.onHideCart}>Back</Button>
+                <Button type='button' className={classes['button--alt']} onClick={props.onHideModal}>Back</Button>
             </div>
         </Fragment>
 
     return (
-        <Modal onHideCart={props.onHideCart}>
+        <Modal onHideModal={props.onHideModal}>
             {isUploading && !didUpload && contentIsUploading}
             {!didUpload && !isUploading && contentToBeUpload}
             {didUpload && !isUploading && contentDidUpload}

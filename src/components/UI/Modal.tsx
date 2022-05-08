@@ -3,12 +3,12 @@ import {Fragment} from "react";
 import ReactDom from "react-dom";
 
 interface Props {
-    onHideCart?: any
+    onHideModal?: any
     children?: any
 }
 
 const Backdrop = (props: Props) => {
-    return <div className={classes.backdrop} onClick={props.onHideCart}/>
+    return <div className={classes.backdrop} onClick={props.onHideModal}/>
 }
 
 const ModalOverlay = (props: Props) => {
@@ -26,7 +26,7 @@ const portalElement = document.getElementById('overlay-root') as HTMLDivElement;
 const Modal = (props: Props) => {
     return (
         <Fragment>
-            {ReactDom.createPortal(<Backdrop onHideCart={props.onHideCart}/>, portalElement)}
+            {ReactDom.createPortal(<Backdrop onHideModal={props.onHideModal}/>, portalElement)}
             {ReactDom.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalElement)}
         </Fragment>
     )

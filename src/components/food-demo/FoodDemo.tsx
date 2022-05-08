@@ -9,20 +9,20 @@ import CartProvider from "./store/CartProvider";
 
 const FoodDemo = () => {
 
-    const [cartIsShown, setCartIsShown] = useState(false);
-    const showCartHandler = () => {
-        setCartIsShown(true);
+    const [modalIsShown, setModalIsShown] = useState(false);
+    const showModalHandler = () => {
+        setModalIsShown(true);
     }
 
-    const hideCartHandler = () => {
-        setCartIsShown(false)
+    const hideModalHandler = () => {
+        setModalIsShown(false)
     }
 
     return (
         <CartProvider>
-            {cartIsShown && <Cart onShowCart={showCartHandler} onHideCart={hideCartHandler}/>}
+            {modalIsShown && <Cart onShowModal={showModalHandler} onHideModal={hideModalHandler}/>}
                 <div className={classes.foodDemo}>
-                    <CartButton onShowCart={showCartHandler}/>
+                    <CartButton onShowCart={showModalHandler}/>
                     <img className={classes.bgImg} src={background} alt="background"/>
                     <Introduction/>
                     <MealsMain/>

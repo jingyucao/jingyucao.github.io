@@ -18,47 +18,7 @@
 
 .aboutMe {
   height: calc(100vh - 5rem);
-  display: flex;
-}
-
-.left {
   position: relative;
-}
-
-#resize {
-  min-width: 47vw;
-  max-width: 1000px;
-  resize: horizontal;
-  overflow: scroll;
-  height: calc(100vh - 5rem);
-  opacity: 0;
-  position: relative;
-  z-index: 1;
-}
-
-#resize::-webkit-scrollbar {
-  width: 2rem;
-  height: calc(100vh - 5rem);
-}
-
-.content {
-  position: absolute;
-  width: 100%;
-  height: calc(100vh - 5rem);
-  color: #000;
-  left: 0;
-  top: 0;
-}
-
-#right {
-  border-left: #B08401 dotted 2px;
-  flex: 1;
-  padding-left: 10px;
-  color: #B08401;
-}
-
-#right p{
-  margin: 0;
 }
 
 .arrowIcon {
