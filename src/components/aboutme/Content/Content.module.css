@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  right: 48vw;
+  right: 42vw;
   position: absolute;
 }
 
@@ -25,6 +25,11 @@
   display: flex;
   flex-direction: column-reverse;
   margin-left: 1rem;
+}
+
+.actionHidden {
+  margin-left: 1rem;
+  visibility: hidden;
 }
 
 .theme {

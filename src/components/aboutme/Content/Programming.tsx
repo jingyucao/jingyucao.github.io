@@ -1,5 +1,6 @@
 import classes from "./Content.module.css";
 import computerIcon from "../image/computer.png";
+import LearnmoreButton from "../UI/LearnmoreButton";
 
 const Programming = () => {
 
@@ -9,7 +10,7 @@ const Programming = () => {
         <span className={classes.textTime}> since the beginning of the pandemic. <br/>
             I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.<br/>
         </span>
-                         </span>
+        </span>
 
     const technologies = <span>
         <span className={classes.textAchive}>Technologies: </span>
@@ -37,12 +38,14 @@ const Programming = () => {
                 </div>
                 <div className={classes.text}>
                     {introduction}
-                    {technologies}
-                    {design}
+                    <div style={{marginTop: '0.5rem'}}>
+                        {technologies}
+                        {design}
+                    </div>
                 </div>
             </div>
             <div className={classes.action}>
-                <button>Hello</button>
+                <LearnmoreButton type='button'/>
             </div>
         </li>
     )
