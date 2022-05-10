@@ -1,6 +1,6 @@
 import classes from './Content.module.css';
 import educationIcon from "../image/work.png";
-import LearnmoreButton from "../UI/LearnmoreButton";
+import DetailButton from "./DetailButton";
 
 const Education = () => {
     return (
@@ -27,7 +27,7 @@ const Education = () => {
                 </div>
             </div>
             <div className={classes.actionHidden} >
-                <LearnmoreButton type='button'/>
+                <DetailButton type='button'/>
             </div>
         </li>
     )

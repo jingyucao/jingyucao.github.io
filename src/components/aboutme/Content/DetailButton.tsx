@@ -1,4 +1,4 @@
-import classes from './LearnmoreButton.module.css';
+import classes from './DetailButton.module.css';
 import React, {MouseEventHandler} from "react";
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
     className?: string;
 }
 
-const LearnmoreButton: React.FC<Props> = (props) => {
+const DetailButton: React.FC<Props> = (props) => {
     return (
         <button
             type={props.type || 'button'}
@@ -24,4 +24,4 @@ const LearnmoreButton: React.FC<Props> = (props) => {
     )
 }
 
-export default LearnmoreButton;
+export default DetailButton;

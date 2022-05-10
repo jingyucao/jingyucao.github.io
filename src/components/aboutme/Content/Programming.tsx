@@ -1,6 +1,6 @@
 import classes from "./Content.module.css";
 import computerIcon from "../image/computer.png";
-import LearnmoreButton from "../UI/LearnmoreButton";
+import DetailButton from "./DetailButton";
 
 const Programming = () => {
 
@@ -45,7 +45,7 @@ const Programming = () => {
                 </div>
             </div>
             <div className={classes.action}>
-                <LearnmoreButton type='button'/>
+                <DetailButton type='button'/>
             </div>
         </li>
     )
