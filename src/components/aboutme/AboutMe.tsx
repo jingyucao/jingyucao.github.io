@@ -1,30 +1,30 @@
 import classes from './AboutMe.module.css';
 import background from './image/profile.png';
-// import arrowIcon from './image/arrow-color.png';
 import Content from "./Content/Content";
-import React, {useState} from "react";
-import Cart from "../food-demo/Cart/Cart";
-import DemoCarousel from "./Carousel/DemoCarousel";
+import React, {MouseEventHandler, useState} from "react";
 import Details from "./Carousel/Details";
 
 
 const AboutMe = () => {
 
-    // const [modalIsShown, setModalIsShown] = useState(true);
-    // const showModalHandler = () => {
-    //     setModalIsShown(true);
-    // }
-    //
-    // const hideModalHandler = () => {
-    //     setModalIsShown(false)
-    // }
+    const [modalIsShown, setModalIsShown] = useState(false);
+    const [selectedID, setSelectedID] = useState('');
+
+    const showModalHandler = (event: any) => {
+        setModalIsShown(true);
+        setSelectedID(event.target.id);
+    }
+
+    const hideModalHandler = () => {
+        setModalIsShown(false)
+        setSelectedID('');
+    }
 
     return (
         <div className={classes.aboutMe}>
-            {/*{modalIsShown && <Cart onShowModal={showModalHandler} onHideModal={hideModalHandler}/>}*/}
-            <Details/>
+            {modalIsShown && <Details onHideModal={hideModalHandler} selectedID={selectedID}/>}
             <img src={background} className={classes.bgImg} alt="background"/>
-            <Content/>
+            <Content onShowModal={showModalHandler}/>
         </div>
     )
 }

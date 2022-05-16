@@ -1,8 +1,9 @@
 import classes from "./Content.module.css";
 import workIcon from "../image/work.png";
 import DetailButton from "./DetailButton";
+import {Props} from "./Content";
 
-const Work = () => {
+const Work = (props: Props) => {
 
     const loidlIntroduction = <span className={classes.textTime}>Atelier Loidl Landscape Architects made a name for itself with several famous projects, <br/>including Gleisdreieck in Berlin and Baakenpark in Hamburg. <br/>I work as a project team member and a junior project manager. </span>
     const a24Introduction = <span className={classes.textTime}>A24 Landscape has been designing different scales projects, <br/>range from urban development concepts to parks, squares and gardens.<br/> I worked as a project team member.</span>
@@ -31,8 +32,8 @@ const Work = () => {
                     </div>
                 </div>
             </div>
-            <div className={classes.action}>
-                <DetailButton type='button'/>
+            <div className={classes.action} >
+                    <DetailButton type='button' onClick={props.onShowModal} id='WorkDetails'/>
             </div>
         </li>
     )

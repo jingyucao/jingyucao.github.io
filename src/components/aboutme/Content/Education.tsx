@@ -1,8 +1,9 @@
 import classes from './Content.module.css';
 import educationIcon from "../image/work.png";
 import DetailButton from "./DetailButton";
+import {Props} from "./Content";
 
-const Education = () => {
+const Education = (props: Props) => {
     return (
         <li>
             <div>
@@ -26,8 +27,8 @@ const Education = () => {
                     <span className={classes.textTime}>Master of Architecture</span>
                 </div>
             </div>
-            <div className={classes.actionHidden} >
-                <DetailButton type='button'/>
+            <div className={classes.action} >
+                <DetailButton type='button' onClick={props.onShowModal} id='EducationDetails'/>
             </div>
         </li>
     )

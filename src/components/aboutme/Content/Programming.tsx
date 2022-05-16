@@ -1,8 +1,9 @@
 import classes from "./Content.module.css";
 import computerIcon from "../image/computer.png";
 import DetailButton from "./DetailButton";
+import {Props} from "./Content";
 
-const Programming = () => {
+const Programming = (props: Props) => {
 
     const introduction = <span>
         <span className={classes.textTime}>I am a </span>
@@ -45,7 +46,7 @@ const Programming = () => {
                 </div>
             </div>
             <div className={classes.action}>
-                <DetailButton type='button'/>
+                <DetailButton type='button' onClick={props.onShowModal} id='ProgrammingDetails'/>
             </div>
         </li>
     )

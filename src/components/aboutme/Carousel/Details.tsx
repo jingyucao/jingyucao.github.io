@@ -1,11 +1,32 @@
 import Modal from "../../UI/Modal";
-import DemoCarousel from "./DemoCarousel";
+import WorkCarousel from "./WorkCarousel";
 import React from "react";
+import ProgrammingCarousel from "./ProgrammingCarousel";
+import EducationCarousel from "./EducationCarousel";
 
-const Details = () => {
+interface Props {
+    onShowModal?: () => void,
+    onHideModal?: () => void,
+    selectedID?: string
+}
+
+const Details = (props: Props) => {
+
+    let content;
+
+    if (props.selectedID === 'WorkDetails') {
+        content = <WorkCarousel/>
+    }else if(props.selectedID === 'ProgrammingDetails'){
+        content = <ProgrammingCarousel/>
+    }else if(props.selectedID === 'EducationDetails'){
+        content = <EducationCarousel/>
+    }else {
+        content = <p>Can't find the information, please try again!</p>
+    }
+
     return (
-        <Modal>
-            <DemoCarousel/>
+        <Modal onHideModal={props.onHideModal}>
+            {content}
         </Modal>
     )
 }

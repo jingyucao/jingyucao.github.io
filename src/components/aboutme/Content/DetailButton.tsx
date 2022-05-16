@@ -3,6 +3,7 @@ import React, {MouseEventHandler} from "react";
 
 interface Props {
     type: "button" | "submit" | "reset";
+    id?: string;
     onClick?: MouseEventHandler;
     className?: string;
 }
@@ -12,8 +13,9 @@ const DetailButton: React.FC<Props> = (props) => {
         <button
             type={props.type || 'button'}
             className={`${classes.button} ${props.className}`}
+            onClick={props.onClick}
         >
-            <span className={classes['hover-underline-animation']}> Learn More </span>
+            <span className={classes['hover-underline-animation']} id={props.id}> Learn More </span>
             <svg id='arrow-horizontal' xmlns="http://www.w3.org/2000/svg" width="30" height="10"
                  viewBox="0 0 46 16">
                 <path id="Path_10" data-name="Path 10"
