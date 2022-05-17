@@ -4,8 +4,8 @@ import classes from './Navigation.module.css';
 const Navigation = () => {
 
     const activeStyle = ({isActive}: any) => ({
-        borderBottom: isActive ? '2px solid #fff' : '',
-        color: isActive ? '#fff' : '#959794'
+        borderBottom: isActive ? '2px solid #B08401' : '',
+        color: isActive ? '#fafafa' : '#959794'
     })
 
     return (

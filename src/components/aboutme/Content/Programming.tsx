@@ -16,7 +16,7 @@ const Programming = (props: Props) => {
     const technologies = <span>
         <span className={classes.textAchive}>Technologies: </span>
         <span className={classes.textTime}>
-        REACT, Javascript, Typescript, HTML, CSS, Git, Github<br/>
+        REACT, Javascript, Typescript, HTML, CSS, Git, Github, Redux<br/>
         Firebase, REST, Unit-Test, Storybook, Agile Methodology <br/>
         </span>
         </span>

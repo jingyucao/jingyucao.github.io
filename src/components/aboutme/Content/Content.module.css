@@ -6,6 +6,18 @@
   align-items: flex-end;
   right: 42vw;
   position: absolute;
+  animation: aboutme-appear 1s ease-out forwards;
+}
+
+@keyframes aboutme-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -25,11 +37,6 @@
   display: flex;
   flex-direction: column-reverse;
   margin-left: 1rem;
-}
-
-.actionHidden {
-  margin-left: 1rem;
-  visibility: hidden;
 }
 
 .theme {

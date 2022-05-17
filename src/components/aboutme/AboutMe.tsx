@@ -1,7 +1,7 @@
 import classes from './AboutMe.module.css';
 import background from './image/profile.png';
 import Content from "./Content/Content";
-import React, {MouseEventHandler, useState} from "react";
+import React, {useState} from "react";
 import Details from "./Carousel/Details";
 
 
