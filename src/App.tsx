@@ -4,6 +4,7 @@ import {Routes, Route, Navigate} from 'react-router-dom';
 import Welcome from './components/welcome/Welcome';
 import AboutMe from './components/aboutme/AboutMe';
 import FoodDemo from "./components/food-demo/FoodDemo";
+import CovidMap from "./components/covidmap/CovidMap";
 
 function App() {
     return (
@@ -12,7 +13,8 @@ function App() {
                 <Route path='/' element={<Navigate to='/welcome'/>}/>
                 <Route path='/welcome' element={<Welcome/>}/>
                 <Route path='/about-me' element={<AboutMe/>}/>
-                <Route path='/food-demo' element={<FoodDemo/>}/>
+                <Route path='/food-app' element={<FoodDemo/>}/>
+                <Route path='/covid-map' element={<CovidMap/>}/>
             </Routes>
         </Layout>
     );
