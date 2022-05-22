@@ -1,9 +1,9 @@
 import classes from "./Content.module.css";
 import computerIcon from "../image/computer.png";
 import DetailButton from "./DetailButton";
-import {Props} from "./Content";
+import {ContentProps} from "./Content";
 
-const Programming = (props: Props) => {
+const Programming = (props: ContentProps) => {
 
     const introduction = <span>
         <span className={classes.textTime}>I am a </span>

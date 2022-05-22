@@ -3,11 +3,11 @@ import Education from "./Education";
 import Work from "./Work";
 import Programming from "./Programming";
 
-export interface Props {
+export interface ContentProps {
     onShowModal: (event:any) => void,
 }
 
-const Content = (props:Props) => {
+const Content = (props:ContentProps) => {
 
     return (
         <ul className={classes.contentList}>

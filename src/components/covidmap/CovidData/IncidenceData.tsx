@@ -1,4 +1,5 @@
 import {useCallback, useEffect} from "react";
+import IncidenceDataTabel from "./IncidenceDataTabel";
 
 const IncidenceData = () => {
 
@@ -9,7 +10,6 @@ const IncidenceData = () => {
                 throw new Error('Something went wrong to load the menu!')
             }
             const data = await response.json();
-            console.log(data);
 
         } catch (error: any) {
             console.log(error)
@@ -23,6 +23,7 @@ const IncidenceData = () => {
     return (
         <div>
             R-Rate
+            <IncidenceDataTabel/>
         </div>
     )
 }

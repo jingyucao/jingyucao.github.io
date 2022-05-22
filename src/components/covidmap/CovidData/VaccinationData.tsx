@@ -9,7 +9,6 @@ const VaccinationData = () => {
                 throw new Error('Something went wrong to load the menu!')
             }
             const data = await response.json();
-            console.log(data);
 
         } catch (error: any) {
             console.log(error)
