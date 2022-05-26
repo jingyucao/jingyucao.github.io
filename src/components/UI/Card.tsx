@@ -3,7 +3,8 @@ import React from "react";
 
 interface Props {
     children: any,
-    style?: Object
+    style?: Object,
+    className?:any
 }
 
 const Card:React.FC<Props> = (props) => {

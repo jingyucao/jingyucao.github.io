@@ -3,6 +3,8 @@ import 'echarts/lib/component/title';
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/grid';
 import 'echarts/lib/chart/line';
+import 'echarts/lib/component/visualMap';
+import 'echarts/lib/component/geo';
 import {MapChart} from 'echarts/charts';
 import geoJson from "./germanymap.json";
 
@@ -42,13 +44,13 @@ const StatesDataMap = (props: chartProps) => {
     dataList = dataList.map((item: any, index: any) => {
         const result = props.data.find((e: any) => e.name === item.name);
         if (result) {
-            item.value = result.confirmed;
+            item.value = result.casesPer100k;
+            item.confirmed = result.confirmed;
             item.deaths = result.deaths;
             item.recovered = result.recovered;
             item.totalconfirmed = result.totalconfirmed;
             item.totaldeaths = result.totaldeaths;
             item.totalrecovered = result.totalrecovered;
-            item.casesPer100k = result.casesPer100k;
             item.casesPerWeek = result.casesPerWeek;
             item.deathsPerWeek = result.deathsPerWeek;
         } else {
@@ -57,89 +59,74 @@ const StatesDataMap = (props: chartProps) => {
         return item
     });
 
-    console.log(dataList)
-
     const options = {
         title: {
-            sublink: 'http://esa.un.org/wpp/Excel-Data/population.htm',
-            left: 'center',
-            top: 'top'
+            text: 'Coronavirus (COVID-19) infection rate in Germany in 2022, by federal state',
+            subtext: 'Data from Robert Koch-Institut',
+            sublink: 'https://www.rki.de/DE/Home/homepage_node.html',
+            left: 'right',
         },
         tooltip: {
             trigger: 'item',
-            formatter: function (params:any) {
-                return [params.name] + '<br/>Neue Fälle: ' + [params.data.value] +
-                    '<br/>Neue Todesfälle: ' + [params.data.deaths] +
-                    '<br/>Fälle gesamt: ' + [params.data.totalconfirmed] +
-                    '<br/>Todesfälle gesamt: ' + [params.data.totaldeaths]
+            formatter: function (params: any) {
+                return [params.name] + '<br/>New Cases: ' + [params.data.confirmed] +
+                    '<br/>New Deaths: ' + [params.data.deaths] +
+                    '<br/>Total Cases: ' + [params.data.totalconfirmed] +
+                    '<br/>Total Deaths: ' + [params.data.totaldeaths]
             },
+            borderColor: '#666',
             textStyle: {
-                fontFamily: 'Helvetica',
+                fontFamily: '"Work Sans", Arial, sans-serif',
                 fontSize: 10,
-                fontWeight: 'bold',
-                color: '#fff'
-            },
+                fontWeight: 'bolder',
+                color: '#666'
+            }
+
         },
         visualMap: {
-            min: 0,
-            max: 5000,
+            min: 20000,
+            max: 40000,
             realtime: true,
             calculable: true,
-            color: ['#BF3B3B', '#FFCCCC'],
+            color: ['#409ebd', '#e0f2c2'],
             left: 30,
             bottom: 58,
             align: 'left',
             orient: "vertical",
             textGap: 15,
             textStyle: {
-                fontFamily: 'Helvetica',
+                fontFamily: '"Work Sans", Arial, sans-serif',
                 fontSize: 10,
                 fontWeight: 'bold',
-                color: '#8C8C8C',
+                color: '#666',
             },
-
-        },
-        geo: {
-            show: true,
-            map: 'germany',
-            label: {
-                show: false
-            },
-            roam: false,
-            itemStyle: {
-                normal: {
-                    areaColor: '#000',
-                },
-                emphasis: {
-                    show: false,
-                }
-            }
         },
         series: [
             {
                 name: 'Covid-19 Germany Map',
                 type: 'map',
                 map: 'germany',
-                roam: false,
+                emphasis: {
+                    show: false,
+                },
+                label: {
+                    borderType: 'solid',
+                    borderWidth: 1,
+                    show: true,
+                    fontFamily: '"Work Sans", Arial, sans-serif',
+                    fontSize: 10,
+                    fontWeight: 'bold',
+                },
                 itemStyle: {
-                    normal: {
-                        areaColor: '#000',
-                        borderType: 'solid',
-                        borderWidth: 1,
-                        borderColor: '#F2F2F2',
-                        label: {
-                            show: true,  //显示省份名称
-                            textStyle: {
-                                fontFamily: 'Helvetica',
-                                fontSize: 10,
-                                fontWeight: 'bold',
-                                color: '#F2F2F2'
-                            }
-                        }
-                    },
                     emphasis: {
-                        show: false,
-                    }
+                        // 普通图表的高亮颜色
+                        color: "red",
+                        // 地图区域的高亮颜色
+                        areaColor: "none",
+                        borderColor: 'red'
+                    },
+                    borderWidth: 2,//边际线大小
+                    borderColor: '#cce6f6',//边界线颜色
                 },
                 data: dataList,
             }

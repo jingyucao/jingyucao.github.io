@@ -13,6 +13,8 @@ const StatesData = () => {
             }
             const jsonData = await response.json();
 
+            console.log(jsonData.data);
+
             let dataObj = {} as any;
             let dataArr = [];
 
@@ -40,6 +42,8 @@ const StatesData = () => {
                 }
             });
 
+            console.log(dataArr);
+
             let statesMapList = [];
             for (const key in statesMapObj) {
                 statesMapObj[key].name = key;
@@ -66,7 +70,6 @@ const StatesData = () => {
 
     return (
         <div>
-            Hello Again.
             <StatesDataMap data={statesCovidInfo}/>
         </div>
     )
