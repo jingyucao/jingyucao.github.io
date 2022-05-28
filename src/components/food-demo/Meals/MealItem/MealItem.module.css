@@ -4,22 +4,25 @@
   margin: 1rem;
   padding-bottom: 1rem;
   border-bottom: 0.5px dotted #fafafa;
+  font-family: "Work Sans", sans-serif;
 }
 
 .mealItem h3 {
   margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .mealItem_description {
   font-style: italic;
   font-size: 0.7rem;
-  color: #999;
+  color: #666;
   margin-top: 3px;
 }
 
 .mealItem_price {
   color: #B08401;
-  font-weight: bold;
+  font-weight: 600;
   margin-top: 0.2rem;
   font-size: 0.9rem;
 }

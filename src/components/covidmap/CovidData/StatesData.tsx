@@ -9,11 +9,9 @@ const StatesData = () => {
         try {
             const response = await fetch('https://api.corona-zahlen.org/states')
             if (!response.ok) {
-                throw new Error('Something went wrong to load the menu!')
+                throw new Error('Something went wrong loading the data!')
             }
             const jsonData = await response.json();
-
-            console.log(jsonData.data);
 
             let dataObj = {} as any;
             let dataArr = [];
@@ -49,15 +47,8 @@ const StatesData = () => {
                 statesMapObj[key].name = key;
                 statesMapList.push(statesMapObj[key])
             }
-            let statesMapListSort = statesMapList.sort((a, b) => {
-                if (a.totalconfirmed > b.totalconfirmed) {
-                    return -1
-                } else {
-                    return 1
-                }
-            });
 
-            setStatesCovidInfo(statesMapListSort);
+            setStatesCovidInfo(statesMapList);
 
         } catch (error: any) {
             console.log(error)
@@ -69,9 +60,7 @@ const StatesData = () => {
     }, [fetchStatesDataHandler])
 
     return (
-        <div>
             <StatesDataMap data={statesCovidInfo}/>
-        </div>
     )
 }
 

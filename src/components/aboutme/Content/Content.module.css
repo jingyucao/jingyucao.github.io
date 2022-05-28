@@ -7,6 +7,7 @@
   right: 42vw;
   position: absolute;
   animation: aboutme-appear 1s ease-out forwards;
+  /*font-family: "Work Sans", sans-serif;*/
 }
 
 @keyframes aboutme-appear {

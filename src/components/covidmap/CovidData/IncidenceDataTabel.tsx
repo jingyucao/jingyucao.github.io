@@ -3,6 +3,7 @@ import 'echarts/lib/component/title';
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/grid';
 import 'echarts/lib/chart/line';
+import classes from "./CovidData.module.css";
 
 let echarts = require('echarts/lib/echarts');
 
@@ -49,9 +50,9 @@ const StatesDataMap = () => {
     })
 
     return (
-        <>
-            <div style={{height: '700px', width: '700px'}} ref={chartRef}/>
-        </>
+        <div className={classes.container}>
+            <div className={classes.incidence} ref={chartRef} id='incidence'/>
+        </div>
     )
 }
 

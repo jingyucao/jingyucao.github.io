@@ -7,7 +7,7 @@ const IncidenceData = () => {
         try {
             const response = await fetch('https://api.corona-zahlen.org/germany/history/incidence/365')
             if (!response.ok) {
-                throw new Error('Something went wrong to load the menu!')
+                throw new Error('Something went wrong loading the data!')
             }
             const data = await response.json();
 
@@ -21,10 +21,7 @@ const IncidenceData = () => {
     }, [fetchMealsHandler])
 
     return (
-        <div>
-            R-Rate
-            <IncidenceDataTabel/>
-        </div>
+        <IncidenceDataTabel/>
     )
 }
 

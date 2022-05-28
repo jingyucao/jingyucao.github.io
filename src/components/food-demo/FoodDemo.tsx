@@ -10,7 +10,7 @@ import CartProvider from "./store/CartProvider";
 const FoodDemo = () => {
 
     const text = 'Food Demo is an online delivery website, written with React in Typescript for Frontend and Firebase for\n' +
-        '         the database, styled with Css Module. The menu and customer data is fetched and updated using REST.'
+        'the database, styled with Css Module. The menu and customer data is fetched and updated using REST.'
 
     const [modalIsShown, setModalIsShown] = useState(false);
     const showModalHandler = () => {
@@ -27,7 +27,7 @@ const FoodDemo = () => {
             <div className={classes.foodDemo}>
                 <CartButton onShowCart={showModalHandler}/>
                 <img className={classes.bgImg} src={background} alt="background"/>
-                <Introduction style={{position:'absolute'}}>{text}</Introduction>
+                <Introduction style={{position:'absolute',width:'50%'}}>{text}</Introduction>
                 <MealsMain/>
             </div>
         </CartProvider>

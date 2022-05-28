@@ -6,7 +6,7 @@ const VaccinationData = () => {
         try {
             const response = await fetch('https://api.corona-zahlen.org/vaccinations/history')
             if (!response.ok) {
-                throw new Error('Something went wrong to load the menu!')
+                throw new Error('Something went wrong loading the data!')
             }
             const data = await response.json();
 

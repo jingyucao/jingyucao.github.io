@@ -8,7 +8,7 @@ interface Props {
 const Introduction = (props: Props) => {
 
     const introStyle = {
-        width: '50%',
+        width: props.style.width,
         textAlign: 'center',
         fontSize: '0.8rem',
         padding: '0.1rem 1rem',
@@ -19,7 +19,7 @@ const Introduction = (props: Props) => {
 
     return (
         <Card style={introStyle}>
-            <p style={{fontWeight: 'bolder'}}>Introduction</p>
+            <p style={{fontWeight: '600'}}>Introduction</p>
             <p>{props.children}</p>
         </Card>
     )
