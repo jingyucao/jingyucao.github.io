@@ -40,8 +40,6 @@ const StatesData = () => {
                 }
             });
 
-            console.log(dataArr);
-
             let statesMapList = [];
             for (const key in statesMapObj) {
                 statesMapObj[key].name = key;

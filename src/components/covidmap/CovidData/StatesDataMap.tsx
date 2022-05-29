@@ -9,7 +9,7 @@ import {MapChart} from 'echarts/charts';
 import geoJson from "./germanymap.json";
 import classes from './CovidData.module.css';
 
-interface chartProps {
+export interface chartProps {
     data: any
 }
 
@@ -66,7 +66,6 @@ const StatesDataMap = (props: chartProps) => {
             subtext: 'Data from Robert Koch-Institut',
             sublink: 'https://www.rki.de/DE/Home/homepage_node.html',
             left: 'left',
-            // left: 590,
             top: 10,
             textStyle: {
                 fontFamily: '"Work Sans", sans-serif',
@@ -108,7 +107,7 @@ const StatesDataMap = (props: chartProps) => {
             orient: "vertical",
             textGap: 15,
             textStyle: {
-                fontFamily: '"Work Sans", Arial, sans-serif',
+                fontFamily: '"Work Sans",sans-serif',
                 fontSize: 10,
                 fontWeight: 'bold',
                 color: '#666',
@@ -130,7 +129,7 @@ const StatesDataMap = (props: chartProps) => {
                     borderType: 'solid',
                     borderWidth: 1,
                     show: true,
-                    fontFamily: '"Work Sans", Arial, sans-serif',
+                    fontFamily: '"Work Sans", sans-serif',
                     fontSize: 9,
                     fontWeight: '600',
                     color: '#666'

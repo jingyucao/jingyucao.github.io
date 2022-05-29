@@ -4,48 +4,108 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/grid';
 import 'echarts/lib/chart/line';
 import classes from "./CovidData.module.css";
+import {chartProps} from "./StatesDataMap";
 
 let echarts = require('echarts/lib/echarts');
 
-const StatesDataMap = () => {
+const IncidenceDataTabel = (props: chartProps) => {
 
     const chartRef = useRef(null) as any;
-    let mapChart = null as any;
+    let covidIncidenceChart = null as any;
+
+    let arrOfDate = props.data.map((a: any) => a.date.substr(0, 10));
+    let arrOfIncidence = props.data.map((a: any) => a.weekIncidence.toFixed(2));
 
     const options = {
         title: {
-            text: "测试表格-react-hook"
+            text: 'COVID-19 weekly incidence rate of Germany in the last 90 days',
+            subtext: 'Data from Robert Koch-Institut',
+            sublink: 'https://www.rki.de/DE/Home/homepage_node.html',
+            left: 'left',
+            top: 10,
+            textStyle: {
+                fontFamily: '"Work Sans", sans-serif',
+                fontSize: 15,
+                fontWeight: 600,
+                color: '#666'
+            },
+            subtextStyle: {
+                fontFamily: '"Work Sans", sans-serif',
+                fontWeight: 300
+            }
+        },
+        grid: {
+            top: 100,
+            bottom: 50
         },
         tooltip: {
             trigger: 'axis'
         },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: arrOfDate,
+            axisLine: {
+                show: 'true',
+                lineStyle: {
+                    color: '#fafafa',
+                    width: 2,
+                    cap: 'square'
+                }
+            },
+            axisLabel: {
+                fontFamily: '"Work Sans", sans-serif',
+                align: 'center',
+                margin: '12'
+            },
+            axisPointer: {
+                type: 'shadow'
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine: {
+                show: 'true',
+                lineStyle: {
+                    color: '#fafafa',
+                    width: 2,
+                    cap: 'square'
+                }
+            },
+            axisLabel: {
+                fontFamily: '"Work Sans", sans-serif',
+                align: 'right',
+                margin: '12'
+            },
+            splitLine: {
+                lineStyle: {
+                    type: 'dotted',
+                }
+            }
         },
         series: [{
-            data: [820, 932, 901, 934, 1290, 1330, 1320],
-            type: 'line'
+            data: arrOfIncidence,
+            type: 'line',
+            name: 'Incidence Rate'
         }]
     }
 
     const renderChart = () => {
         const chart = echarts.getInstanceByDom(chartRef.current)
         if (chart) {
-            mapChart = chart
+            covidIncidenceChart = chart
         } else {
-            mapChart = echarts.init(chartRef.current)
+            covidIncidenceChart = echarts.init(chartRef.current)
+            window.addEventListener('resize', () => {
+                covidIncidenceChart && covidIncidenceChart.resize();
+            })
         }
-        mapChart.setOption(options)
+        covidIncidenceChart.setOption(options)
     };
 
     useEffect(() => {
         renderChart()
         return () => {
-            mapChart && mapChart.dispose()
+            covidIncidenceChart && covidIncidenceChart.dispose()
         }
     })
 
@@ -56,4 +116,4 @@ const StatesDataMap = () => {
     )
 }
 
-export default StatesDataMap;
+export default IncidenceDataTabel;
