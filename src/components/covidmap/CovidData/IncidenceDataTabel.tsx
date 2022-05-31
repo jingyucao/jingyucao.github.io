@@ -25,12 +25,13 @@ const IncidenceDataTabel = (props: chartProps) => {
             top: 10,
             textStyle: {
                 fontFamily: '"Work Sans", sans-serif',
-                fontSize: 15,
+                fontSize: 18,
                 fontWeight: 600,
                 color: '#666'
             },
             subtextStyle: {
                 fontFamily: '"Work Sans", sans-serif',
+                fontSize: 14,
                 fontWeight: 300
             }
         },

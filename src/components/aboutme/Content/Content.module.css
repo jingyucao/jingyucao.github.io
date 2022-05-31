@@ -89,3 +89,16 @@
   height: 3.5rem;
   object-fit: cover;
 }
+
+@media screen and (max-width: 1024px) {
+  .textTime {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  .textAchive {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+  }
+}

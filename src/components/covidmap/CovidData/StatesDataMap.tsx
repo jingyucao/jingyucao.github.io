@@ -69,12 +69,13 @@ const StatesDataMap = (props: chartProps) => {
             top: 10,
             textStyle: {
                 fontFamily: '"Work Sans", sans-serif',
-                fontSize: 15,
+                fontSize: 18,
                 fontWeight: 600,
                 color: '#666'
             },
             subtextStyle: {
                 fontFamily: '"Work Sans", sans-serif',
+                fontSize: 14,
                 fontWeight: 300
             }
         },
@@ -130,8 +131,8 @@ const StatesDataMap = (props: chartProps) => {
                     borderWidth: 1,
                     show: true,
                     fontFamily: '"Work Sans", sans-serif',
-                    fontSize: 9,
-                    fontWeight: '600',
+                    fontSize: 11,
+                    fontWeight: '300',
                     color: '#666'
                 },
                 itemStyle: {
