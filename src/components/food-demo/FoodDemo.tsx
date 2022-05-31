@@ -9,7 +9,7 @@ import CartProvider from "./store/CartProvider";
 
 const FoodDemo = () => {
 
-    const text = 'Food Demo is an online delivery website, written with React in Typescript for Frontend and Firebase for\n' +
+    const text = 'Hello Hellow Food Demo is an online delivery website, written with React in Typescript for Frontend and Firebase for\n' +
         'the database, styled with Css Module. The menu and customer data is fetched and updated using REST.'
 
     const [modalIsShown, setModalIsShown] = useState(false);
