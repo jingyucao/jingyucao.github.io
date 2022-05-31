@@ -102,7 +102,7 @@ const StatesDataMap = (props: chartProps) => {
             realtime: true,
             calculable: true,
             color: ['#409ebd', '#e0f2c2'],
-            left: 590,
+            left: 650,
             bottom: 60,
             align: 'left',
             orient: "vertical",
