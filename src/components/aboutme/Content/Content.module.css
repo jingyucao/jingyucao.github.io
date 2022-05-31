@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  right: 42vw;
+  right: 35vw;
   position: absolute;
   animation: aboutme-appear 1s ease-out forwards;
-  /*font-family: "Work Sans", sans-serif;*/
+  font-family: "Work Sans", sans-serif;
 }
 
 @keyframes aboutme-appear {
@@ -46,8 +46,8 @@
 }
 
 .content {
-  width: 8rem;
-  height: 2.7rem;
+  width: 10rem;
+  height: 3.5rem;
   text-align: center;
   /*background-color: #DED1BD;*/
   background-color: #B08401;
@@ -58,12 +58,14 @@
 
 .contentText {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 
 .contentTime {
   font-weight: lighter;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }
 
 .text {
@@ -72,16 +74,18 @@
 }
 
 .textTime {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .textAchive {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: bold;
 }
 
 .icon {
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 3.5rem;
+  height: 3.5rem;
   object-fit: cover;
 }
