@@ -1,7 +1,7 @@
 {
   "name": "react-practise_router_quotesdemo",
   "version": "0.1.0",
-  "homepage": "https://jingyucao.github.io/jingyucao.github.io",
+  "homepage": "https://jingyucao.github.io/website",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
