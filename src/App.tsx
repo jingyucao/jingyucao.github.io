@@ -10,11 +10,11 @@ function App() {
     return (
         <Layout>
             <Routes>
-                <Route path='/' element={<Navigate to='/website?page=welcome'/>}/>
-                <Route path='/website?page=welcome' element={<Welcome/>}/>
-                <Route path='/website?page=aboutme' element={<AboutMe/>}/>
-                <Route path='/website?page=foodapp' element={<FoodDemo/>}/>
-                <Route path='/website?page=covidmap' element={<CovidMap/>}/>
+                <Route path='/' element={<Navigate to='/website'/>}/>
+                <Route path='/website' element={<Welcome/>}/>
+                <Route path='/aboutme' element={<AboutMe/>}/>
+                <Route path='/foodapp' element={<FoodDemo/>}/>
+                <Route path='/covidmap' element={<CovidMap/>}/>
             </Routes>
         </Layout>
     );
