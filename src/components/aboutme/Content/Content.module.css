@@ -74,13 +74,13 @@
 }
 
 .textTime {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
 }
 
 .textAchive {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
   font-weight: bold;
 }
 
@@ -90,7 +90,7 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .textTime {
     font-size: 0.9rem;
     line-height: 1.2rem;
