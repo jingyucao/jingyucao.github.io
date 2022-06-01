@@ -90,7 +90,7 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1450px) {
   .textTime {
     font-size: 0.9rem;
     line-height: 1.2rem;
