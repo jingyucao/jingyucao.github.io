@@ -10,8 +10,8 @@ function App() {
     return (
         <Layout>
             <Routes>
-                <Route path='/*' element={<Navigate to='/website'/>}/>
-                <Route path='/website' element={<Welcome/>}/>
+                <Route path='/*' element={<Navigate to='/'/>}/>
+                <Route path='/' element={<Welcome/>}/>
                 <Route path='/aboutme' element={<AboutMe/>}/>
                 <Route path='/foodapp' element={<FoodDemo/>}/>
                 <Route path='/covidmap' element={<CovidMap/>}/>

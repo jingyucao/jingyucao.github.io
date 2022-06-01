@@ -14,7 +14,7 @@ const Navigation = () => {
                 <ul>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/website'>Home</NavLink>
+                                 to='/'>Home</NavLink>
                     </li>
                     <li>
                         <NavLink style={activeStyle}
