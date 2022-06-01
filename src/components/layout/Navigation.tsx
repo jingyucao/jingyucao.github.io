@@ -14,19 +14,19 @@ const Navigation = () => {
                 <ul>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/welcome'>Home</NavLink>
+                                 to='/website?page=welcome'>Home</NavLink>
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/about-me'>About me</NavLink>
+                                 to='/website?page=aboutme'>About me</NavLink>
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/food-app'>Food Demo</NavLink>
+                                 to='/website?page=foodapp'>Food Demo</NavLink>
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/covid-map'>Covid Demo</NavLink>
+                                 to='/website?page=covidmap'>Covid Demo</NavLink>
                     </li>
                 </ul>
             </nav>
