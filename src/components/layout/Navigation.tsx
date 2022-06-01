@@ -18,15 +18,15 @@ const Navigation = () => {
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/website/aboutme'>About me</NavLink>
+                                 to='/aboutme'>About me</NavLink>
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/website/foodapp'>Food Demo</NavLink>
+                                 to='/foodapp'>Food Demo</NavLink>
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/website/covidmap'>Covid Demo</NavLink>
+                                 to='/covidmap'>Covid Demo</NavLink>
                     </li>
                 </ul>
             </nav>

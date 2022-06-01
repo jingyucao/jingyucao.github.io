@@ -12,9 +12,9 @@ function App() {
             <Routes>
                 <Route path='/*' element={<Navigate to='/website'/>}/>
                 <Route path='/website' element={<Welcome/>}/>
-                <Route path='/website/aboutme' element={<AboutMe/>}/>
-                <Route path='/website/foodapp' element={<FoodDemo/>}/>
-                <Route path='/website/covidmap' element={<CovidMap/>}/>
+                <Route path='/aboutme' element={<AboutMe/>}/>
+                <Route path='/foodapp' element={<FoodDemo/>}/>
+                <Route path='/covidmap' element={<CovidMap/>}/>
             </Routes>
         </Layout>
     );
