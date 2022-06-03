@@ -36,19 +36,19 @@
 }
 
 .control #name {
-  width: 36vw;
+  width: 35vw;
 }
 
 .control #city {
-  width: 15vw;
+  width: 14vw;
 }
 
 .control #address {
-  width: 36vw;
+  width: 35vw;
 }
 
 .control #plz {
-  width: 15vw;
+  width: 14vw;
 }
 
 @media (max-width: 768px) {
