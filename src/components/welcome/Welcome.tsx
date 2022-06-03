@@ -12,9 +12,11 @@ const Welcome = () => {
             <h1>Welcome To My Page</h1>
             <div className={classes.logo}>
                 <a href="https://www.linkedin.com/in/jingyu-cao-7457a4169/">
-                    <div className={classes.logoCard}>
-                        <img className={classes.linkedinLogoItem} src={linkedinLogo} alt="Linkedin"/>
-                        <img className={classes.linkedinLogoTop} src={linkedinBlueLogo} alt="Linkedin"/>
+                    <div className={classes.logoCard} data-testid='logoCard'>
+                        <img className={classes.linkedinLogoItem} src={linkedinLogo} alt="Linkedin"
+                             data-testid='whiteLogo'/>
+                        <img className={classes.linkedinLogoTop} src={linkedinBlueLogo} alt="Linkedin"
+                             data-testid='colorLogo'/>
                     </div>
                 </a>
                 <a href="https://github.com/jingyucao">
@@ -22,7 +24,6 @@ const Welcome = () => {
                         <img className={classes.githubLogoItem} src={githubLogo} alt="Github"/>
                         <img className={classes.githubLogoTop} src={githubGirlLogo} alt="Github"/>
                     </div>
-
                 </a>
 
             </div>

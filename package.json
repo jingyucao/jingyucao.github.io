@@ -42,7 +42,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.17.12",
     "eslint": "^8.11.0",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "identity-obj-proxy": "^3.0.0"
   }
 }
