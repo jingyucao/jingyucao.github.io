@@ -1,6 +1,7 @@
 import MealItemInput from "./MealItemInput";
 import Button from "../../../UI/Button";
 import React, {useRef, useState} from "react";
+import classes from './MealItemForm.module.css';
 
 interface Props {
     id: string,
@@ -30,7 +31,7 @@ const MealItemForm = (props: Props) => {
     }
 
     return (
-        <form style={{textAlign: "right"}} onSubmit={submitHandler}>
+        <form className={classes.form} onSubmit={submitHandler}>
             <MealItemInput
                 ref={amountInputRef}
                 label='Amount'

@@ -2,7 +2,6 @@ import MealTab from "./MealTab";
 import {useCallback, useEffect, useState} from "react";
 import MealList from "./MealList";
 import Card from '../../UI/Card';
-import classes from './MealsMain.module.css';
 
 type Meal = {
     id: string,
@@ -61,7 +60,7 @@ const MealsMain = () => {
     }
 
     return (
-        <div className={classes.main}>
+        <div style={{width: '100%'}}>
             <MealTab onChooseMeal={chooseMealHandler}/>
             <Card style={{width: '50%'}}>
                 {content}

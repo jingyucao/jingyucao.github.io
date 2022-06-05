@@ -6,8 +6,9 @@
 
 .tabItem {
   font: inherit;
+  font-size: 1rem;
   border: transparent;
-  background: white;
+  background: #fafafa;
   opacity: 0.7;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -18,7 +19,7 @@
 }
 
 .tabItem:hover,
-.tabItem:active{
+.tabItem:active {
   opacity: 0.9;
 }
 
@@ -26,4 +27,16 @@
   font-style: italic;
   font-size: 0.7rem;
   color: #999999;
+}
+
+@media (max-width: 600px) {
+  .tabItem {
+    margin: 0.3rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .tabItemQuantity {
+    display: none;
+  }
 }

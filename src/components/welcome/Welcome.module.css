@@ -11,7 +11,7 @@
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 350;
   color: #FAFAFA;
-  font-size: 2rem;
+  font-size: 6rem;
   text-align: center;
   animation: welcome-appear 1s ease-out forwards;
 }
@@ -27,9 +27,9 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 600px) {
   .welcome h1 {
-    font-size: 6rem;
+    font-size: 2rem;
   }
 }
 

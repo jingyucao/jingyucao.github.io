@@ -16,7 +16,7 @@ const Introduction = (props: Props) => {
         top: '1rem',
         position: props.style.position,
         fontFamily: '"Work Sans", sans-serif'
-}
+    }
 
     return (
         <Card style={introStyle}>

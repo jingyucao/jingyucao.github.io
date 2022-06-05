@@ -1,0 +1,9 @@
+.form {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .form {
+    text-align: left
+  }
+}

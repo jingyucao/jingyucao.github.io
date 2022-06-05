@@ -16,6 +16,13 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .bgImg {
+    left: 50%;
+    margin-left: -600px;
+  }
+}
+
 .aboutMe {
   position: relative;
 }

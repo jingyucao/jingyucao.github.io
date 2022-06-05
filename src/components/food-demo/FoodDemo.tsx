@@ -25,11 +25,11 @@ const FoodDemo = () => {
         <CartProvider>
             {modalIsShown && <Cart onShowModal={showModalHandler} onHideModal={hideModalHandler}/>}
             <div className={classes.foodDemo}>
-                <CartButton onShowCart={showModalHandler}/>
                 <img className={classes.bgImg} src={background} alt="background"/>
-                <Introduction style={{position:'absolute',width:'50%'}}>{text}</Introduction>
+                <Introduction style={{position: 'relative', width: '50%'}}>{text}</Introduction>
                 <MealsMain/>
             </div>
+            <CartButton onShowCart={showModalHandler}/>
         </CartProvider>
     )
 }

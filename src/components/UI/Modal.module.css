@@ -22,7 +22,7 @@
   overflow: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .modal {
     left: 5%;
     width: 80%;
