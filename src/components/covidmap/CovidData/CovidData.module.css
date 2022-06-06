@@ -8,6 +8,24 @@
   width: 800px;
 }
 
+.computer{
+  display: block;
+}
+
+.phone{
+  display:none;
+}
+
+@media (max-width: 600px){
+  .computer{
+    display: none;
+  }
+
+  .phone{
+    display:block;
+  }
+}
+
 .incidence {
   height: 800px;
   width: 800px;

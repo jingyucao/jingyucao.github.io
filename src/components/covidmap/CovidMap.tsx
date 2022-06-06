@@ -15,10 +15,10 @@ const CovidMap = () => {
         <div className={classes.covidMap}>
             <Introduction style={{position: 'relative', width: '70%'}}>{text}</Introduction>
             <Card style={{width: '70%'}}>
-                <StatesData/>
+                <IncidenceData/>
             </Card>
             <Card style={{width: '70%'}}>
-                <IncidenceData/>
+                <StatesData/>
             </Card>
             <img className={classes.bgImg} src={background} alt="background"/>
         </div>

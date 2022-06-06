@@ -1,5 +1,6 @@
 import {useCallback, useEffect, useState} from "react";
-import StatesDataMap from "./StatesDataMap";
+import classes from './CovidData.module.css';
+import MapPC from "./MapPC";
 
 const StatesData = () => {
 
@@ -58,7 +59,14 @@ const StatesData = () => {
     }, [fetchStatesDataHandler])
 
     return (
-            <StatesDataMap data={statesCovidInfo}/>
+        <div>
+            <div className={classes.computer}>
+                <MapPC data={statesCovidInfo}/>
+            </div>
+            {/*<div className={classes.phone}>*/}
+            {/*    <StatesDataMap data={statesCovidInfo}/>*/}
+            {/*</div>*/}
+        </div>
     )
 }
 

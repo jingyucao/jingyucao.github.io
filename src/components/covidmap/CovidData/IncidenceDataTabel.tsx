@@ -4,7 +4,10 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/grid';
 import 'echarts/lib/chart/line';
 import classes from "./CovidData.module.css";
-import {chartProps} from "./StatesDataMap";
+
+interface chartProps {
+    data: any
+}
 
 let echarts = require('echarts/lib/echarts');
 
