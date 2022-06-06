@@ -1,10 +1,10 @@
 import StatesDataMap from "./StatesDataMap";
 
-export interface chartProps {
+export interface mapProps {
     data: any
 }
 
-const MapPC = (props:chartProps)=>{
+const MapPC = (props:mapProps)=>{
 
     let dataList: any = [
         {name: 'Schleswig-Holstein', value: 0},

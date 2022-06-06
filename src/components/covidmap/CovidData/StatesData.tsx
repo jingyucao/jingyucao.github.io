@@ -1,6 +1,7 @@
 import {useCallback, useEffect, useState} from "react";
 import classes from './CovidData.module.css';
 import MapPC from "./MapPC";
+import MapPhone from "./MapPhone";
 
 const StatesData = () => {
 
@@ -63,9 +64,9 @@ const StatesData = () => {
             <div className={classes.computer}>
                 <MapPC data={statesCovidInfo}/>
             </div>
-            {/*<div className={classes.phone}>*/}
-            {/*    <StatesDataMap data={statesCovidInfo}/>*/}
-            {/*</div>*/}
+            <div className={classes.phone}>
+                <MapPhone data={statesCovidInfo}/>
+            </div>
         </div>
     )
 }

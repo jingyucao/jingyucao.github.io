@@ -92,11 +92,11 @@
   .content {
     width: 8rem;
     height: 3rem;
-    padding-top: 0.15rem;
+    padding-top: 0.2rem;
   }
 
   .contentText {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
   }
 

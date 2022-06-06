@@ -35,7 +35,9 @@ const Education = (props: ContentProps) => {
                 </div>
             </div>
             <div className={classes.action}>
-                <DetailButton type='button' onClick={props.onShowModal} id='EducationDetails'/>
+                <DetailButton type='button'
+                              onClick={props.onShowModal}
+                              id='EducationDetails'/>
             </div>
         </li>
     )

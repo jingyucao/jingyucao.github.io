@@ -13,7 +13,12 @@ const legendStyle = {
 
 const EducationCarousel = (props: any) => {
     return (
-        <Carousel showArrows={true} showThumbs={false} onChange={props.onChange} onClickItem={props.onClickItem}>
+        <Carousel
+            showArrows={true}
+            showThumbs={false}
+            onChange={props.onChange}
+            onClickItem={props.onClickItem}
+            data-testid='educationCarousel'>
             <div>
                 <img src={Artclub} alt="Art Club"/>
                 <p className="legend" style={legendStyle}>Game of Quadrangle - Art club on the hill</p>
