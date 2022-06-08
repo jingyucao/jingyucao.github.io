@@ -5,7 +5,8 @@ const Navigation = () => {
 
     const activeStyle = ({isActive}: any) => ({
         borderBottom: isActive ? '2px solid #B08401' : '',
-        color: isActive ? '#fafafa' : '#959794'
+        // backgroundColor: isActive ? '#B08401':'transparent',
+        color: isActive ? '#B08401' : '#fafafa'
     })
 
     return (

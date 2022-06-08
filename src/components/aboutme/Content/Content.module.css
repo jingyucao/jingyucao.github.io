@@ -55,7 +55,7 @@
   line-height: 1.8rem;
 }
 
-.contentTime {
+.contentThin {
   font-weight: lighter;
   font-size: 0.9rem;
   line-height: 1.2rem;
@@ -63,15 +63,15 @@
 
 .text {
   margin-top: 5px;
-  color: #959794;
+  color: #555;
 }
 
-.textTime {
+.textThin {
   font-size: 1.1rem;
   line-height: 1.6rem;
 }
 
-.textAchive {
+.textBold {
   font-size: 1.1rem;
   line-height: 1.6rem;
   font-weight: bold;
@@ -100,17 +100,17 @@
     line-height: 1.5rem;
   }
 
-  .contentTime {
+  .contentThin {
     font-size: 0.8rem;
     line-height: 1rem;
   }
 
-  .textTime {
+  .textThin {
     font-size: 0.9rem;
     line-height: 1.2rem;
   }
 
-  .textAchive {
+  .textBold {
     font-size: 0.9rem;
     line-height: 1.2rem;
     font-weight: bold;
@@ -122,12 +122,12 @@
     right: 10vw;
   }
 
-  .textTime {
+  .textThin {
     font-size: 0.8rem;
     line-height: 1rem;
   }
 
-  .textAchive {
+  .textBold {
     font-size: 0.8rem;
     line-height: 1rem;
     font-weight: bold;
@@ -147,7 +147,7 @@
     font-size: 0.8rem;
   }
 
-  .contentTime {
+  .contentThin {
     display: none;
   }
 }

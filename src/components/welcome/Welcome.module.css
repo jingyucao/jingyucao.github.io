@@ -1,19 +1,32 @@
 .welcome {
   display: flex;
-  /*background-color: red;*/
   height: calc(100vh - 5rem);
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.welcome h1 {
+.introduction{
   font-family: "Work Sans", Arial, sans-serif;
-  font-weight: 350;
   color: #FAFAFA;
-  font-size: 6rem;
   text-align: center;
   animation: welcome-appear 1s ease-out forwards;
+}
+
+.introduction .bigFont{
+  font-weight: 300;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.introduction .smallFont{
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.introduction .middleFont{
+  font-weight: 300;
+  font-size: 2.5rem;
 }
 
 @keyframes welcome-appear {
@@ -28,9 +41,15 @@
 }
 
 @media (max-width: 600px) {
-  .welcome h1 {
-    font-size: 2rem;
+  .introduction .bigFont {
+    font-size: 3rem;
   }
+
+  .introduction .middleFont {
+    font-size: 1rem;
+  }
+
+
 }
 
 .bgImg {

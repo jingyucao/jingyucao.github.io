@@ -6,24 +6,26 @@ import {ContentProps} from "./Content";
 const Programming = (props: ContentProps) => {
 
     const introduction = <span>
-        <span className={classes.textTime}>I am a </span>
-        <span className={classes.textAchive}>Self-taught Frontend Developer</span>
-        <span className={classes.textTime}> since the beginning of the pandemic. <br/>
+        <span className={classes.textThin}>Hey, Nice to meet you! I am </span>
+        <span className={classes.textBold}>Jingyu Cao. <br/></span>
+        <span className={classes.textThin}>I am a </span>
+        <span className={classes.textBold}>Self-taught Frontend Developer</span>
+        <span className={classes.textThin}> and a former Landscape Architect. <br/>
             I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.<br/>
         </span>
         </span>
 
     const technologies = <span>
-        <span className={classes.textAchive}>Technologies: </span>
-        <span className={classes.textTime}>
+        <span className={classes.textBold}>Technologies: </span>
+        <span className={classes.textThin}>
         REACT, Javascript, Typescript, HTML, CSS, Git, Github, Redux<br/>
         Firebase, REST, Unit-Test, Storybook, Agile Methodology <br/>
         </span>
         </span>
 
     const design = <span>
-        <span className={classes.textAchive}>Design: </span>
-        <span className={classes.textTime}>Photoshop, Indesign, Illustrator, Vectorworks, AutoCAD, C4D</span>
+        <span className={classes.textBold}>Design: </span>
+        <span className={classes.textThin}>Photoshop, Indesign, Illustrator, Vectorworks, AutoCAD, C4D</span>
         </span>
 
     return (
@@ -34,7 +36,7 @@ const Programming = (props: ContentProps) => {
                     <div className={classes.content}>
                         <span className={classes.contentText}>Programming</span>
                         <br/>
-                        <span className={classes.contentTime}>2020-2022</span>
+                        <span className={classes.contentThin}>2020-2022</span>
                     </div>
                 </div>
                 <div className={classes.text}>

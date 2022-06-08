@@ -14,6 +14,7 @@ const DetailButton: React.FC<Props> = (props) => {
             type={props.type || 'button'}
             className={`${classes.button} ${props.className}`}
             onClick={props.onClick}
+            data-testid='detailButton'
         >
             <span className={classes['hover-underline-animation']} id={props.id}> Learn More </span>
             <svg id='arrow-horizontal' xmlns="http://www.w3.org/2000/svg" width="30" height="10"

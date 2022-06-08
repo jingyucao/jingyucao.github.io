@@ -8,12 +8,12 @@ interface Props {
 }
 
 const Backdrop = (props: Props) => {
-    return <div className={classes.backdrop} onClick={props.onHideModal}/>
+    return <div className={classes.backdrop} onClick={props.onHideModal} data-testid='backdropDiv'/>
 }
 
 const ModalOverlay = (props: Props) => {
     return (
-        <div className={classes.modal}>
+        <div className={classes.modal} data-testid='modalDiv'>
             <div className={classes.content}>
                 {props.children}
             </div>
