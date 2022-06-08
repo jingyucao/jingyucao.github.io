@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.606e9e7e.css",
-    "main.js": "/website/static/js/main.b627ac18.js",
-    "static/media/profile.png": "/website/static/media/profile.35762dbe1c02ce802daf.png",
+    "main.css": "/website/static/css/main.c4b1dc35.css",
+    "main.js": "/website/static/js/main.9e70fdba.js",
     "static/media/background.jpg": "/website/static/media/background.4c665f5add16e3ce83d7.jpg",
+    "static/media/profile.png": "/website/static/media/profile.5426234b42b1b5610066.png",
     "static/media/sushi.png": "/website/static/media/sushi.a7cd99e95131bed5f7d3.png",
     "static/media/education-2.jpg": "/website/static/media/education-2.9b2d4ec1bbdf1ab280e0.jpg",
     "static/media/work-4.jpg": "/website/static/media/work-4.d99fd1f7ea50d00d2e46.jpg",
@@ -23,11 +23,11 @@
     "static/media/github-icon.png": "/website/static/media/github-icon.1341ec870e64bbcbe6a7.png",
     "static/media/linkedin-blue.png": "/website/static/media/linkedin-blue.bd505389be82879a4ed0.png",
     "index.html": "/website/index.html",
-    "main.606e9e7e.css.map": "/website/static/css/main.606e9e7e.css.map",
-    "main.b627ac18.js.map": "/website/static/js/main.b627ac18.js.map"
+    "main.c4b1dc35.css.map": "/website/static/css/main.c4b1dc35.css.map",
+    "main.9e70fdba.js.map": "/website/static/js/main.9e70fdba.js.map"
   },
   "entrypoints": [
-    "static/css/main.606e9e7e.css",
-    "static/js/main.b627ac18.js"
+    "static/css/main.c4b1dc35.css",
+    "static/js/main.9e70fdba.js"
   ]
 }
