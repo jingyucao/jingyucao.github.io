@@ -43,8 +43,10 @@
   width: 10rem;
   height: 3.5rem;
   text-align: center;
-  background-color: #B08401;
-  color: #FAFAFA;
+  /*background-color: #B08401;*/
+  background-color: #999;
+  /*border-bottom: 2px solid #000;*/
+  color: #fafafa;
   margin-right: 1rem;
   padding-top: 0.25rem;
 }
@@ -85,33 +87,33 @@
 
 @media screen and (max-width: 1450px) {
   .icon {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .content {
     width: 8rem;
-    height: 3rem;
-    padding-top: 0.2rem;
+    height: 2.5rem;
+    padding-top: 0.1rem;
   }
 
   .contentText {
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-  }
-
-  .contentThin {
     font-size: 0.8rem;
     line-height: 1rem;
   }
 
+  .contentThin {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+
   .textThin {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.2rem;
   }
 
   .textBold {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.2rem;
     font-weight: bold;
   }

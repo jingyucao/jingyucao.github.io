@@ -1,12 +1,15 @@
 .button {
   border: none;
   background: none;
+  padding-bottom: 3px;
 }
 
 .button span {
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   letter-spacing: 2px;
   font-size: 10px;
+  /*font-family: "Work Sans", sans-serif;*/
+  font-weight: 600;
   padding-right: 10px;
   text-transform: uppercase;
 }
@@ -26,7 +29,7 @@
 
 .hover-underline-animation {
   position: relative;
-  color: #1A1920;
+  color: #B08401;
   padding-bottom: 20px;
 }
 
@@ -38,7 +41,7 @@
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: #1A1920;
+  background-color: #B08401;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -47,4 +50,6 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+
 

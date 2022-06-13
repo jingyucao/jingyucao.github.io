@@ -51,7 +51,7 @@ const IncidenceDataTabel = (props: chartProps) => {
             axisLine: {
                 show: 'true',
                 lineStyle: {
-                    color: '#fafafa',
+                    color: '#666',
                     width: 2,
                     cap: 'square'
                 }
@@ -70,7 +70,7 @@ const IncidenceDataTabel = (props: chartProps) => {
             axisLine: {
                 show: 'true',
                 lineStyle: {
-                    color: '#fafafa',
+                    color: '#666',
                     width: 2,
                     cap: 'square'
                 }

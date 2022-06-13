@@ -9,19 +9,19 @@
   z-index: -10;
 }
 
-@media screen and (max-width: 1024px) {
-  .bgImg {
-    left: 50%;
-    margin-left: -512px;
-  }
-}
+/*@media screen and (max-width: 1024px) {*/
+/*  .bgImg {*/
+/*    !*left: 50%;*!*/
+/*    !*margin-left: -512px;*!*/
+/*  }*/
+/*}*/
 
-@media screen and (max-width: 600px) {
-  .bgImg {
-    left: 50%;
-    margin-left: -600px;
-  }
-}
+/*@media screen and (max-width: 600px) {*/
+/*  .bgImg {*/
+/*    !*left: 50%;*!*/
+/*    !*margin-left: 600px;*!*/
+/*  }*/
+/*}*/
 
 .aboutMe {
   position: relative;

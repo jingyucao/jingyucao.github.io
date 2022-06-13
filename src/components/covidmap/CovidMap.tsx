@@ -20,7 +20,8 @@ const CovidMap = () => {
             <Card style={{width: '70%'}}>
                 <StatesData/>
             </Card>
-            <img className={classes.bgImg} src={background} alt="background"/>
+            <div className={classes.bgColor}/>
+            {/*<img className={classes.bgImg} src={background} alt="background"/>*/}
         </div>
     )
 }
