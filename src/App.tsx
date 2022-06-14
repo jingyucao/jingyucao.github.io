@@ -4,7 +4,7 @@ import {Routes, Route, Navigate} from 'react-router-dom';
 import Welcome from './components/welcome/Welcome';
 import AboutMe from './components/aboutme/AboutMe';
 import FoodDemo from "./components/food-demo/FoodDemo";
-import CovidMap from "./components/covidmap/CovidMap";
+import CovidData from "./components/covidmap/CovidData";
 
 function App() {
     return (
@@ -14,7 +14,7 @@ function App() {
                 <Route path='/' element={<Welcome/>}/>
                 <Route path='/aboutme' element={<AboutMe/>}/>
                 <Route path='/foodapp' element={<FoodDemo/>}/>
-                <Route path='/covidmap' element={<CovidMap/>}/>
+                <Route path='/coviddata' element={<CovidData/>}/>
             </Routes>
         </Layout>
     );

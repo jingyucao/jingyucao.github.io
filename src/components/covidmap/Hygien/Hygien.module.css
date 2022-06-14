@@ -1,0 +1,42 @@
+.wrapper {
+  /*background: red;*/
+  padding: 5px;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.wrapper img {
+  margin: auto;
+  max-width: 23%;
+  display: block;
+  cursor: pointer;
+}
+
+.wrapper p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  animation: hygien-appear 1s ease-out forwards;
+}
+
+@keyframes hygien-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1450px) {
+  .wrapper p {
+    font-size: 1rem;
+  }
+}

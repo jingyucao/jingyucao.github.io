@@ -9,8 +9,7 @@ describe('Education Component', ()=>{
     expect(educationButton).toBeInTheDocument();
     expect(educationButton).toHaveTextContent('Learn More')
     userEvent.click(educationButton);
-    const modalFragment = screen.queryByTestId('modalFragment')
-    expect(modalFragment).toBeVisible()
-
+    const artClubImage = screen.queryAllByRole('img')
+    expect(artClubImage[0]).toBeVisible()
   })
 })

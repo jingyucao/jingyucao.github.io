@@ -37,3 +37,9 @@
   color: #fafafa;
 }
 
+@media (max-width: 600px) {
+  .cart-item {
+    max-height: 6rem;
+  }
+}
+

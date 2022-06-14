@@ -3,9 +3,9 @@ import Welcome from "./Welcome.tsx";
 
 describe(
   'Welcome Component', () => {
-    test('renders Welcome as a text', () => {
+    test('renders Hello World', () => {
       render(<Welcome/>);
-      const welcomeElement = screen.getByText(/Welcome To My Page/, {exact: true});
+      const welcomeElement = screen.getByText(/Hello World/, {exact: true});
       expect(welcomeElement).toBeInTheDocument();
     });
     //

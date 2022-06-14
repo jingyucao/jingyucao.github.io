@@ -108,3 +108,10 @@
   border-color: #b94571;
   background-color: #fafafa;
 }
+
+@media (max-width: 600px) {
+  .form {
+    max-height: 10rem;
+  }
+}
+

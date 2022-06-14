@@ -15,7 +15,8 @@ const Introduction = (props: Props) => {
         color: '#666',
         top: '1rem',
         position: props.style.position,
-        fontFamily: '"Work Sans", sans-serif'
+        fontFamily: '"Work Sans", sans-serif',
+        margin: '0 auto 2rem auto'
     }
 
     return (

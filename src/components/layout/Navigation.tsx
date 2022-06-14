@@ -23,11 +23,11 @@ const Navigation = () => {
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/foodapp'>Food Demo</NavLink>
+                                 to='/foodapp'>Food Delivery</NavLink>
                     </li>
                     <li>
                         <NavLink style={activeStyle}
-                                 to='/covidmap'>Covid Demo</NavLink>
+                                 to='/coviddata'>Covid Data</NavLink>
                     </li>
                 </ul>
             </nav>

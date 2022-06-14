@@ -62,7 +62,7 @@ const MealsMain = () => {
     return (
         <div style={{width: '100%'}}>
             <MealTab onChooseMeal={chooseMealHandler}/>
-            <Card style={{width: '50%'}}>
+            <Card style={{width: '50%',margin: '0 auto 2rem auto'}}>
                 {content}
             </Card>
         </div>

@@ -26,7 +26,6 @@ const AboutMe = () => {
             <Content onShowModal={showModalHandler}/>
             <div className={classes.bgColor}/>
             <img src={background} className={classes.bgImg} alt="background"/>
-
         </div>
     )
 }
