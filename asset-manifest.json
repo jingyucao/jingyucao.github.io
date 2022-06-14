@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.a37e6e40.css",
-    "main.js": "/website/static/js/main.822d6d03.js",
+    "main.css": "/website/static/css/main.8e14ae83.css",
+    "main.js": "/website/static/js/main.22bea593.js",
     "static/media/background.jpg": "/website/static/media/background.a4193073c03e11173066.jpg",
-    "static/media/profile.png": "/website/static/media/profile.00d4654cb880a378f517.png",
+    "static/media/profile.png": "/website/static/media/profile.35762dbe1c02ce802daf.png",
     "static/media/sushi.png": "/website/static/media/sushi.a7cd99e95131bed5f7d3.png",
     "static/media/education-2.jpg": "/website/static/media/education-2.9b2d4ec1bbdf1ab280e0.jpg",
     "static/media/work-4.jpg": "/website/static/media/work-4.d99fd1f7ea50d00d2e46.jpg",
@@ -15,19 +15,19 @@
     "static/media/programming-4.jpg": "/website/static/media/programming-4.e0ced616b8e4d77c0fef.jpg",
     "static/media/programming-1.jpg": "/website/static/media/programming-1.3abf5649bafed5a308ba.jpg",
     "static/media/programming-2.jpg": "/website/static/media/programming-2.925bc4d9562aebf5f469.jpg",
-    "static/media/education.png": "/website/static/media/education.6e76de0baac6321626cc.png",
-    "static/media/work.png": "/website/static/media/work.980aeac82bcd20482c12.png",
     "static/media/github-girl.png": "/website/static/media/github-girl.19380bbad84244a2b345.png",
-    "static/media/computer.png": "/website/static/media/computer.bc20e2fa1485b73d5bbf.png",
+    "static/media/education.png": "/website/static/media/education.9553123ee2c482c5fb75.png",
+    "static/media/computer.png": "/website/static/media/computer.170b17f35bfa9f94b05a.png",
+    "static/media/work.png": "/website/static/media/work.f0d1c3362103c4ac1625.png",
     "static/media/linkedin-logo.png": "/website/static/media/linkedin-logo.11200d8a8227360d9e20.png",
     "static/media/github-icon.png": "/website/static/media/github-icon.1341ec870e64bbcbe6a7.png",
     "static/media/linkedin-blue.png": "/website/static/media/linkedin-blue.bd505389be82879a4ed0.png",
     "index.html": "/website/index.html",
-    "main.a37e6e40.css.map": "/website/static/css/main.a37e6e40.css.map",
-    "main.822d6d03.js.map": "/website/static/js/main.822d6d03.js.map"
+    "main.8e14ae83.css.map": "/website/static/css/main.8e14ae83.css.map",
+    "main.22bea593.js.map": "/website/static/js/main.22bea593.js.map"
   },
   "entrypoints": [
-    "static/css/main.a37e6e40.css",
-    "static/js/main.822d6d03.js"
+    "static/css/main.8e14ae83.css",
+    "static/js/main.22bea593.js"
   ]
 }
