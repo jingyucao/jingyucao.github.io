@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.eed4491b.css",
-    "main.js": "/website/static/js/main.7324811f.js",
+    "main.css": "/website/static/css/main.41a340e1.css",
+    "main.js": "/website/static/js/main.38bccc7b.js",
     "static/media/background.jpg": "/website/static/media/background.a4193073c03e11173066.jpg",
     "static/media/profile.png": "/website/static/media/profile.35762dbe1c02ce802daf.png",
     "static/media/sushi.png": "/website/static/media/sushi.a7cd99e95131bed5f7d3.png",
@@ -17,21 +17,21 @@
     "static/media/programming-2.jpg": "/website/static/media/programming-2.925bc4d9562aebf5f469.jpg",
     "static/media/github-girl.png": "/website/static/media/github-girl.19380bbad84244a2b345.png",
     "static/media/education.png": "/website/static/media/education.9553123ee2c482c5fb75.png",
+    "static/media/washhand.png": "/website/static/media/washhand.a1151fb6391dd08b2a7c.png",
+    "static/media/vaccine.png": "/website/static/media/vaccine.554b9e355197e4d88cff.png",
     "static/media/computer.png": "/website/static/media/computer.170b17f35bfa9f94b05a.png",
     "static/media/work.png": "/website/static/media/work.f0d1c3362103c4ac1625.png",
     "static/media/linkedin-logo.png": "/website/static/media/linkedin-logo.11200d8a8227360d9e20.png",
-    "static/media/vaccine.png": "/website/static/media/vaccine.fc5e07db56fc813afd04.png",
-    "static/media/washhand.png": "/website/static/media/washhand.f414babfdcd5a17f9c78.png",
-    "static/media/facemask.png": "/website/static/media/facemask.88ed4370d843263a298e.png",
+    "static/media/antiseptic.png": "/website/static/media/antiseptic.23d9b4a4fec91b3cda0d.png",
+    "static/media/facemask.png": "/website/static/media/facemask.6358669dfd795d5c7aa5.png",
     "static/media/github-icon.png": "/website/static/media/github-icon.1341ec870e64bbcbe6a7.png",
-    "static/media/antiseptic.png": "/website/static/media/antiseptic.96d3a5fbb8e7f831a1b5.png",
     "static/media/linkedin-blue.png": "/website/static/media/linkedin-blue.bd505389be82879a4ed0.png",
     "index.html": "/website/index.html",
-    "main.eed4491b.css.map": "/website/static/css/main.eed4491b.css.map",
-    "main.7324811f.js.map": "/website/static/js/main.7324811f.js.map"
+    "main.41a340e1.css.map": "/website/static/css/main.41a340e1.css.map",
+    "main.38bccc7b.js.map": "/website/static/js/main.38bccc7b.js.map"
   },
   "entrypoints": [
-    "static/css/main.eed4491b.css",
-    "static/js/main.7324811f.js"
+    "static/css/main.41a340e1.css",
+    "static/js/main.38bccc7b.js"
   ]
 }
