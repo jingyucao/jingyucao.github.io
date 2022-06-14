@@ -45,10 +45,13 @@
   text-align: center;
   /*background-color: #B08401;*/
   background-color: #999;
-  /*border-bottom: 2px solid #000;*/
   color: #fafafa;
   margin-right: 1rem;
   padding-top: 0.25rem;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content:center;*/
+  /*align-items: center;*/
 }
 
 .contentText {
@@ -65,7 +68,7 @@
 
 .text {
   margin-top: 5px;
-  color: #555;
+  color: #fafafa;
 }
 
 .textThin {
@@ -147,6 +150,7 @@
 
   .contentText {
     font-size: 0.8rem;
+    line-height: 1.9rem;
   }
 
   .contentThin {

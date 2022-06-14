@@ -10,7 +10,7 @@ const Programming = (props: ContentProps) => {
         <span className={classes.textBold}>Jingyu Cao. <br/></span>
         <span className={classes.textThin}>I am a </span>
         <span className={classes.textBold}>Self-taught Frontend Developer</span>
-        <span className={classes.textThin}> and a former Landscape Architect. <br/>
+        <span className={classes.textThin}> and a Landscape Architect. <br/>
             I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.<br/>
         </span>
         </span>

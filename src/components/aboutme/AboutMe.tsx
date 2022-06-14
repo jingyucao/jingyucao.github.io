@@ -23,8 +23,10 @@ const AboutMe = () => {
     return (
         <div className={classes.aboutMe}>
             {modalIsShown && <Details onHideModal={hideModalHandler} selectedID={selectedID}/>}
-            <img src={background} className={classes.bgImg} alt="background"/>
             <Content onShowModal={showModalHandler}/>
+            <div className={classes.bgColor}/>
+            <img src={background} className={classes.bgImg} alt="background"/>
+
         </div>
     )
 }
