@@ -4,7 +4,7 @@ import {Routes, Route, Navigate} from 'react-router-dom';
 import Welcome from './components/welcome/Welcome';
 import AboutMe from './components/aboutme/AboutMe';
 import FoodDemo from "./components/food-demo/FoodDemo";
-import CovidData from "./components/covidmap/CovidData";
+import CovidData from "./components/coviddata/CovidData";
 
 function App() {
     return (

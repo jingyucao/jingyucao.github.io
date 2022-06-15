@@ -29,7 +29,8 @@
 
 .hover-underline-animation {
   position: relative;
-  color: #B08401;
+  /*color: #B08401;*/
+  color: #F1C40F;
   padding-bottom: 20px;
 }
 
@@ -41,7 +42,7 @@
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: #B08401;
+  background-color: #F1C40F;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
