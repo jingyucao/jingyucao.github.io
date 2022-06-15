@@ -7,7 +7,7 @@ import 'echarts/lib/component/visualMap';
 import 'echarts/lib/component/geo';
 import {MapChart} from 'echarts/charts';
 import geoJson from "./germanymap.json";
-import classes from './CovidData.module.css';
+import classes from './StatesMap.module.css';
 
 export interface chartProps {
     options: any

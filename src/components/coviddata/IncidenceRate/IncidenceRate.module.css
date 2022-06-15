@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.rateTitle {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  margin: 0.5rem 0 0.5rem 0.5rem
+}
+
+.rateSubtitle {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #666;
+  margin: 0 0 0 0.5rem
+}
+
+.rateContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.incidence {
+  height: 500px;
+  width: 500px;
+}
+
+@media (max-width: 600px) {
+
+  .incidence {
+    height: 300px;
+    width: 300px;
+  }
+
+  .rateTitle {
+    font-size: 0.9rem;
+  }
+
+  .rateSubtitle {
+    font-size: 0.8rem;
+  }
+}
+
+

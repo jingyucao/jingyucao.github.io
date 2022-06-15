@@ -1,7 +1,7 @@
 import classes from "./CovidData.module.css";
 import Card from "../UI/Card";
 import StatesData from "./CovidData/StatesData";
-import IncidenceData from "./CovidData/IncidenceData";
+import IncidenceRate from "./IncidenceRate/IncidenceRate";
 import React from "react";
 import Introduction from "../UI/Introduction";
 import Hygien from "./Hygien/Hygien";
@@ -20,7 +20,7 @@ const CovidData = () => {
                         <Hygien/>
                     </Card>
                     <Card style={{width: '100%'}}>
-                        <IncidenceData/>
+                        <IncidenceRate/>
                     </Card>
                 </div>
                 <div className={classes.right}>
@@ -29,7 +29,6 @@ const CovidData = () => {
                     </Card>
                 </div>
             </div>
-            <div className={classes.bgColor}/>
             <div className={classes.bgColor}/>
         </div>
     )

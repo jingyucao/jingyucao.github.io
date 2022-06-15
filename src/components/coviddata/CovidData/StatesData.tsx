@@ -1,5 +1,5 @@
 import {useCallback, useEffect, useState} from "react";
-import classes from './CovidData.module.css';
+import classes from './StatesMap.module.css';
 import MapPC from "./MapPC";
 import MapPhone from "./MapPhone";
 
