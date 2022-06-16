@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Baden-Württemberg"
+        "name": "BW"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -3469,7 +3469,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Berlin"
+        "name": "BE"
       },
       "geometry": {
         "type": "Polygon",
@@ -3932,7 +3932,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Brandenburg",
+        "name": "BB",
         "cp":[13.3, 52.9]
       },
       "geometry": {
@@ -7186,7 +7186,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bremen"
+        "name": "HB"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -7659,7 +7659,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bayern"
+        "name": "BY"
       },
       "geometry": {
         "type": "Polygon",
@@ -12974,7 +12974,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hamburg"
+        "name": "HH"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -13463,7 +13463,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hessen"
+        "name": "HE"
       },
       "geometry": {
         "type": "Polygon",
@@ -16366,7 +16366,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Niedersachsen"
+        "name": "NI"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -21385,7 +21385,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mecklenburg-Vorpommern"
+        "name": "MV"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -25702,7 +25702,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nordrhein-Westfalen"
+        "name": "NW"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -29351,7 +29351,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Rheinland-Pfalz"
+        "name": "RP"
       },
       "geometry": {
         "type": "Polygon",
@@ -31666,7 +31666,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Saarland"
+        "name": "SL"
       },
       "geometry": {
         "type": "Polygon",
@@ -32477,7 +32477,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sachsen"
+        "name": "SN"
       },
       "geometry": {
         "type": "Polygon",
@@ -35164,7 +35164,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sachsen-Anhalt"
+        "name": "ST"
       },
       "geometry": {
         "type": "Polygon",
@@ -37631,7 +37631,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Schleswig-Holstein"
+        "name": "SH"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -40554,7 +40554,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Thüringen"
+        "name": "TH"
       },
       "geometry": {
         "type": "Polygon",

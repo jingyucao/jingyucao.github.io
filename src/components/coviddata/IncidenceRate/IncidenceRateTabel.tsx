@@ -22,7 +22,7 @@ const IncidenceRateTabel = (props: chartProps) => {
     const options = {
         grid: {
             bottom: 50,
-            left:50
+            left: 50
         },
         tooltip: {
             trigger: 'axis'
@@ -74,7 +74,10 @@ const IncidenceRateTabel = (props: chartProps) => {
         series: [{
             data: arrOfIncidence,
             type: 'line',
-            name: 'Incidence Rate'
+            name: 'Incidence Rate',
+            areaStyle: {
+                color: 'rgba(66, 165, 245, 0.5)'
+            }
         }]
     }
 

@@ -1,7 +1,6 @@
 import {useCallback, useEffect, useState} from "react";
-import classes from './StatesMap.module.css';
-import MapPC from "./MapPC";
-import MapPhone from "./MapPhone";
+import classes from './StatesData.module.css';
+import MapSetting from "./MapSetting";
 
 const StatesData = () => {
 
@@ -15,6 +14,8 @@ const StatesData = () => {
             }
             const jsonData = await response.json();
 
+            console.log(jsonData)
+
             let dataObj = {} as any;
             let dataArr = [];
 
@@ -24,9 +25,11 @@ const StatesData = () => {
             }
 
             let statesMapObj = {} as any;
-            dataArr.forEach((item, key) => {
-                statesMapObj[item.name] = {
-                    "name": item.name,
+            dataArr.forEach((item) => {
+                statesMapObj[item.id] = {
+                    "name":item.abbreviation,
+                    "state": item.name,
+                    "id":item.id,
                     "confirmed": item.delta.cases,
                     "deaths": item.delta.deaths,
                     "recovered": item.delta.recovered,
@@ -44,9 +47,11 @@ const StatesData = () => {
 
             let statesMapList = [];
             for (const key in statesMapObj) {
-                statesMapObj[key].name = key;
+                statesMapObj[key].id = key;
                 statesMapList.push(statesMapObj[key])
             }
+
+            console.log(statesMapList)
 
             setStatesCovidInfo(statesMapList);
 
@@ -60,12 +65,12 @@ const StatesData = () => {
     }, [fetchStatesDataHandler])
 
     return (
-        <div>
+        <div className={classes.wrapper}>
+            <p className={classes.mapTitle}>COVID-19 infection rate in Germany in 2022 by federal state</p>
+            <p className={classes.mapSubtitle}>Data from Robert Koch-Institut</p>
+            <p className={classes.mapSubtitle}>Last Update: {}</p>
             <div className={classes.computer}>
-                <MapPC data={statesCovidInfo}/>
-            </div>
-            <div className={classes.phone}>
-                <MapPhone data={statesCovidInfo}/>
+                <MapSetting data={statesCovidInfo}/>
             </div>
         </div>
     )

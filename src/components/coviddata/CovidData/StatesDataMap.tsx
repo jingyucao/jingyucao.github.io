@@ -7,7 +7,7 @@ import 'echarts/lib/component/visualMap';
 import 'echarts/lib/component/geo';
 import {MapChart} from 'echarts/charts';
 import geoJson from "./germanymap.json";
-import classes from './StatesMap.module.css';
+import classes from './StatesData.module.css';
 
 export interface chartProps {
     options: any
@@ -45,7 +45,7 @@ const StatesDataMap = (props: chartProps) => {
     )
 
     return (
-        <div className={classes.container}>
+        <div className={classes.mapContainer}>
             <div className={classes.map} ref={chartRef} id='map'/>
         </div>
     )

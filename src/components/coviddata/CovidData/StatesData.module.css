@@ -4,7 +4,7 @@
   justify-content: flex-start;
 }
 
-.rateTitle {
+.mapTitle {
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -12,7 +12,7 @@
   margin: 0.5rem 0 0.5rem 0.5rem
 }
 
-.rateSubtitle {
+.mapSubtitle {
   font-family: "Work Sans", sans-serif;
   font-size: 0.9rem;
   font-style: italic;
@@ -21,32 +21,36 @@
   margin: 0 0 0 0.5rem
 }
 
-.rateContainer {
+.mapContainer {
   display: flex;
   justify-content: center;
 }
 
-.incidence {
+.map {
   height: 600px;
   width: 600px;
 }
 
-@media (max-width: 1450px){
-  .incidence{
+.computer {
+  display: block;
+}
+
+@media (max-width: 1450px) {
+  .map {
     height: 500px;
     width: 500px;
   }
 }
 
-@media (max-width: 1200px){
-  .incidence{
+@media (max-width: 1200px) {
+  .map {
     height: 400px;
     width: 400px;
   }
 }
 
-@media (max-width: 900px){
-  .incidence{
+@media (max-width: 900px) {
+  .map {
     height: 300px;
     width: 300px;
   }
@@ -54,31 +58,32 @@
 
 @media (max-width: 600px) {
 
-  .incidence {
+  .map {
     height: 400px;
     width: 400px;
   }
 
-  .rateTitle {
+  .mapTitle {
     font-size: 0.9rem;
   }
 
-  .rateSubtitle {
+  .mapSubtitle {
     font-size: 0.8rem;
   }
 }
 
 @media (max-width: 400px) {
 
-  .incidence {
+  .map {
     height: 300px;
     width: 300px;
   }
-  .rateTitle {
+
+  .mapTitle {
     font-size: 0.9rem;
   }
 
-  .rateSubtitle {
+  .mapSubtitle {
     font-size: 0.8rem;
   }
 }
@@ -86,18 +91,17 @@
 
 @media (max-width: 300px) {
 
-  .incidence {
+  .map {
     height: 200px;
     width: 200px;
   }
-  .rateTitle {
+
+  .mapTitle {
     font-size: 0.9rem;
   }
 
-  .rateSubtitle {
+  .mapSubtitle {
     font-size: 0.8rem;
   }
 }
-
-
 

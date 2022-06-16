@@ -5,7 +5,7 @@ import classes from "./IncidenceRate.module.css";
 const IncidenceRate = () => {
 
     const [incidenceData, setIncidenceData] = useState([] as any);
-    const [lastUpdateDate,setLastUpdateDate] = useState('');
+    const [lastUpdateDate, setLastUpdateDate] = useState('');
 
     const fetchMealsHandler = useCallback(async () => {
         try {
@@ -14,8 +14,6 @@ const IncidenceRate = () => {
                 throw new Error('Something went wrong loading the data!')
             }
             const data = await response.json();
-
-            console.log(data)
 
             setLastUpdateDate(data.meta.lastUpdate.slice(0, 10))
             setIncidenceData(data.data);

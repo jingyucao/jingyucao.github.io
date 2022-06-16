@@ -19,12 +19,12 @@ const CovidData = () => {
                     <Card style={{width: '100%', marginBottom: '1rem'}}>
                         <Hygien/>
                     </Card>
-                    <Card style={{width: '100%'}}>
+                    <Card style={{width: '100%',marginBottom: '1rem'}}>
                         <IncidenceRate/>
                     </Card>
                 </div>
                 <div className={classes.right}>
-                    <Card style={{width: '100%'}}>
+                    <Card style={{width: '100%',marginBottom: '1rem'}}>
                         <StatesData/>
                     </Card>
                 </div>

@@ -4,30 +4,33 @@ export interface mapProps {
     data: any
 }
 
-const MapPC = (props:mapProps)=>{
+const MapSetting = (props: mapProps) => {
 
     let dataList: any = [
-        {name: 'Schleswig-Holstein', value: 0},
-        {name: 'Hamburg', value: 0},
-        {name: 'Niedersachsen', value: 0},
-        {name: 'Bremen', value: 0},
-        {name: 'Nordrhein-Westfalen', value: 0},
-        {name: 'Hessen', value: 0},
-        {name: 'Rheinland-Pfalz', value: 0},
-        {name: 'Baden-Württemberg', value: 0},
-        {name: 'Bayern', value: 0},
-        {name: 'Saarland', value: 0},
-        {name: 'Berlin', value: 0},
-        {name: 'Brandenburg', value: 0},
-        {name: 'Mecklenburg-Vorpommern', value: 0},
-        {name: 'Sachsen', value: 0},
-        {name: 'Sachsen-Anhalt', value: 0},
-        {name: 'Thüringen', value: 0}
+        {name: 'SH', value: 0},
+        {name: 'HH', value: 0},
+        {name: 'NI', value: 0},
+        {name: 'HB', value: 0},
+        {name: 'NW', value: 0},
+        {name: 'HE', value: 0},
+        {name: 'RP', value: 0},
+        {name: 'BW', value: 0},
+        {name: 'BY', value: 0},
+        {name: 'SL', value: 0},
+        {name: 'BE', value: 0},
+        {name: 'BB', value: 0},
+        {name: 'MV', value: 0},
+        {name: 'SN', value: 0},
+        {name: 'ST', value: 0},
+        {name: 'TH', value: 0}
     ];
+
+    console.log(props.data);
 
     dataList = dataList.map((item: any) => {
         const result = props.data.find((e: any) => e.name === item.name);
         if (result) {
+            item.state = result.state;
             item.value = result.casesPer100k;
             item.confirmed = result.confirmed;
             item.deaths = result.deaths;
@@ -44,28 +47,10 @@ const MapPC = (props:mapProps)=>{
     });
 
     const OptionsOnPC = {
-        title: {
-            text: 'COVID-19 infection rate in Germany in 2022, by federal state',
-            subtext: 'Data from Robert Koch-Institut',
-            sublink: 'https://www.rki.de/DE/Home/homepage_node.html',
-            left: 'left',
-            top: 10,
-            textStyle: {
-                fontFamily: '"Work Sans", sans-serif',
-                fontSize: 18,
-                fontWeight: 600,
-                color: '#666'
-            },
-            subtextStyle: {
-                fontFamily: '"Work Sans", sans-serif',
-                fontSize: 14,
-                fontWeight: 300
-            }
-        },
         tooltip: {
             trigger: 'item',
             formatter: function (params: any) {
-                return [params.name] + '<br/>Infection Rate: ' + [params.data.value.toFixed(2)] + '<br/>New Cases: ' + [params.data.confirmed] +
+                return [params.data.state] + '<br/>Infection Rate: ' + [params.data.value.toFixed(2)] + '<br/>New Cases: ' + [params.data.confirmed] +
                     '<br/>New Deaths: ' + [params.data.deaths] +
                     '<br/>Total Cases: ' + [params.data.totalconfirmed] +
                     '<br/>Total Deaths: ' + [params.data.totaldeaths]
@@ -108,6 +93,12 @@ const MapPC = (props:mapProps)=>{
                         borderColor: '#666',
                     }
                 },
+                // zoom: 1,
+                // roam: true,
+                // scaleLimit: {
+                //     min: 1,
+                //     max: 2
+                // },
                 label: {
                     borderType: 'solid',
                     borderWidth: 1,
@@ -118,7 +109,7 @@ const MapPC = (props:mapProps)=>{
                     color: '#666'
                 },
                 itemStyle: {
-                    borderWidth: 1.5,
+                    borderWidth: 1,
                     borderColor: '#F6F6F6',//边界线颜色
                 },
                 data: dataList,
@@ -131,4 +122,4 @@ const MapPC = (props:mapProps)=>{
     )
 }
 
-export default MapPC;
+export default MapSetting;
