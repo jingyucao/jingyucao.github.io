@@ -1,10 +1,11 @@
 import classes from "./CovidData.module.css";
 import Card from "../UI/Card";
-import StatesData from "./CovidData/StatesData";
+import StatesData from "./CovidMap/StatesData";
 import IncidenceRate from "./IncidenceRate/IncidenceRate";
 import React from "react";
 import Introduction from "../UI/Introduction";
 import Hygien from "./Hygien/Hygien";
+import Vaccination from "./Vaccination/Vaccination";
 
 const CovidData = () => {
 
@@ -26,6 +27,9 @@ const CovidData = () => {
                 <div className={classes.right}>
                     <Card style={{width: '100%',marginBottom: '1rem'}}>
                         <StatesData/>
+                    </Card>
+                    <Card style={{width: '100%',marginBottom: '1rem'}}>
+                        <Vaccination/>
                     </Card>
                 </div>
             </div>

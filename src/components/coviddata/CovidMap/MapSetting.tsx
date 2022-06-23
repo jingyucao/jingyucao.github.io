@@ -25,8 +25,6 @@ const MapSetting = (props: mapProps) => {
         {name: 'TH', value: 0}
     ];
 
-    console.log(props.data);
-
     dataList = dataList.map((item: any) => {
         const result = props.data.find((e: any) => e.name === item.name);
         if (result) {
@@ -46,7 +44,7 @@ const MapSetting = (props: mapProps) => {
         return item
     });
 
-    const OptionsOnPC = {
+    const MapSetting = {
         tooltip: {
             trigger: 'item',
             formatter: function (params: any) {
@@ -93,12 +91,6 @@ const MapSetting = (props: mapProps) => {
                         borderColor: '#666',
                     }
                 },
-                // zoom: 1,
-                // roam: true,
-                // scaleLimit: {
-                //     min: 1,
-                //     max: 2
-                // },
                 label: {
                     borderType: 'solid',
                     borderWidth: 1,
@@ -118,7 +110,7 @@ const MapSetting = (props: mapProps) => {
     }
 
     return (
-        <StatesDataMap options={OptionsOnPC}/>
+        <StatesDataMap options={MapSetting}/>
     )
 }
 

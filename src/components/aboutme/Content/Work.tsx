@@ -9,7 +9,7 @@ const Work = (props: ContentProps) => {
     const a24Introduction = <span className={classes.textThin}>A24 Landscape has been designing different scales projects, <br/>range from urban development concepts to parks, squares and gardens.<br/> I worked as a project team member.</span>
 
     return (
-        <li>
+        <li data-testid='workComponent'>
             <div>
                 <div className={classes.theme}>
                     <img className={classes.icon} src={workIcon} alt="icon"/>
@@ -25,7 +25,7 @@ const Work = (props: ContentProps) => {
                     <br/>
                     {loidlIntroduction}
                     <div style={{marginTop: '0.5rem'}}>
-                        <span className={classes.textThin}> 2016-2019: </span>
+                        <span className={classes.textThin}>2016-2019: </span>
                         <span className={classes.textBold}>A24 Landschaftsarchitektur</span>
                         <br/>
                         {a24Introduction}

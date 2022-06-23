@@ -18,15 +18,17 @@ const Welcome = () => {
                 <a href="https://www.linkedin.com/in/jingyu-cao-7457a4169/">
                     <div className={classes.logoCard} data-testid='logoCard'>
                         <img className={classes.linkedinLogoItem} src={linkedinLogo} alt="Linkedin"
-                             data-testid='whiteLogo'/>
+                             data-testid='whiteLinkedinLogo'/>
                         <img className={classes.linkedinLogoTop} src={linkedinBlueLogo} alt="Linkedin"
-                             data-testid='colorLogo'/>
+                             data-testid='colorLinkedinLogo'/>
                     </div>
                 </a>
                 <a href="https://github.com/jingyucao">
                     <div className={classes.logoCard}>
-                        <img className={classes.githubLogoItem} src={githubLogo} alt="Github"/>
-                        <img className={classes.githubLogoTop} src={githubGirlLogo} alt="Github"/>
+                        <img className={classes.githubLogoItem} src={githubLogo} alt="Github"
+                             data-testid='whiteGithubLogo'/>
+                        <img className={classes.githubLogoTop} src={githubGirlLogo} alt="Github"
+                             data-testid='colorGithubLogo'/>
                     </div>
                 </a>
 

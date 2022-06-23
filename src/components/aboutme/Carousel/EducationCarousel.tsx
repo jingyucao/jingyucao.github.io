@@ -19,8 +19,8 @@ const EducationCarousel = (props: any) => {
             onChange={props.onChange}
             onClickItem={props.onClickItem}
             data-testid='educationCarousel'>
-            <div>
-                <img src={Artclub} alt="Art Club"/>
+            <div data-testid='artClubDiv'>
+                <img src={Artclub} alt="Art Club" data-testid='artClubImg'/>
                 <p className="legend" style={legendStyle}>Game of Quadrangle - Art club on the hill</p>
             </div>
             <div>

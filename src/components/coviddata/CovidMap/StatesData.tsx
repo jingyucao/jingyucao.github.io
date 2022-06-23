@@ -5,6 +5,7 @@ import MapSetting from "./MapSetting";
 const StatesData = () => {
 
     const [statesCovidInfo, setStatesCovidInfo] = useState([] as any);
+    const [lastUpdateDate, setLastUpdateDate] = useState('');
 
     const fetchStatesDataHandler = useCallback(async () => {
         try {
@@ -13,8 +14,6 @@ const StatesData = () => {
                 throw new Error('Something went wrong loading the data!')
             }
             const jsonData = await response.json();
-
-            console.log(jsonData)
 
             let dataObj = {} as any;
             let dataArr = [];
@@ -51,8 +50,7 @@ const StatesData = () => {
                 statesMapList.push(statesMapObj[key])
             }
 
-            console.log(statesMapList)
-
+            setLastUpdateDate(jsonData.meta.lastUpdate.slice(0, 10))
             setStatesCovidInfo(statesMapList);
 
         } catch (error: any) {
@@ -68,7 +66,7 @@ const StatesData = () => {
         <div className={classes.wrapper}>
             <p className={classes.mapTitle}>COVID-19 infection rate in Germany in 2022 by federal state</p>
             <p className={classes.mapSubtitle}>Data from Robert Koch-Institut</p>
-            <p className={classes.mapSubtitle}>Last Update: {}</p>
+            <p className={classes.mapSubtitle}>Last Update: {lastUpdateDate}</p>
             <div className={classes.computer}>
                 <MapSetting data={statesCovidInfo}/>
             </div>

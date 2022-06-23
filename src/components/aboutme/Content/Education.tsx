@@ -10,14 +10,14 @@ const Education = (props: ContentProps) => {
 
     return (
 
-        <li>
+        <li data-testid='educationComponent'>
             <div>
                 <div className={classes.theme}>
                     <img className={classes.icon} src={educationIcon} alt="icon"/>
                     <div className={classes.content}>
                         <span className={classes.contentText}>Education</span>
                         <br/>
-                        <span className={classes.contentThin}>2008-2016</span>
+                        <span className={classes.contentThin}>2007-2016</span>
                     </div>
                 </div>
                 <div className={classes.text}>
@@ -27,7 +27,7 @@ const Education = (props: ContentProps) => {
                     {Bachelor}
                     <br/>
                     <div style={{marginTop: '0.5rem'}}>
-                        <span className={classes.textThin}> 2016-2019: </span>
+                        <span className={classes.textThin}> 2013-2016: </span>
                         <span className={classes.textBold}> Karlsruhe Institute of Technology (KIT)</span>
                         <br/>
                         {Master}
@@ -37,8 +37,7 @@ const Education = (props: ContentProps) => {
             <div className={classes.action}>
                 <DetailButton type='button'
                               onClick={props.onShowModal}
-                              id='EducationDetails'
-                              data-testid='educationButton'/>
+                              id='EducationDetails'/>
             </div>
         </li>
     )

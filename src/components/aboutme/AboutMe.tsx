@@ -24,8 +24,8 @@ const AboutMe = () => {
         <div className={classes.aboutMe}>
             {modalIsShown && <Details onHideModal={hideModalHandler} selectedID={selectedID}/>}
             <Content onShowModal={showModalHandler}/>
-            <div className={classes.bgColor}/>
-            <img src={background} className={classes.bgImg} alt="background"/>
+            <div className={classes.bgColor} data-testid='bgGrayColor'/>
+            <img src={background} className={classes.bgImg} alt="background" data-testid='bgAboutMeImg'/>
         </div>
     )
 }

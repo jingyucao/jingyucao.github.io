@@ -7,7 +7,7 @@ const IncidenceRate = () => {
     const [incidenceData, setIncidenceData] = useState([] as any);
     const [lastUpdateDate, setLastUpdateDate] = useState('');
 
-    const fetchMealsHandler = useCallback(async () => {
+    const fetchDataHandler = useCallback(async () => {
         try {
             const response = await fetch('https://api.corona-zahlen.org/germany/history/incidence/90')
             if (!response.ok) {
@@ -24,8 +24,8 @@ const IncidenceRate = () => {
     }, [])
 
     useEffect(() => {
-        fetchMealsHandler()
-    }, [fetchMealsHandler])
+        fetchDataHandler()
+    }, [fetchDataHandler])
 
 
     return (

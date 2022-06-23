@@ -1,0 +1,82 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.rateTitle {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  margin: 0.5rem 0 0.5rem 0.5rem
+}
+
+.rateContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.vaccination {
+  height: 240px;
+  width: 600px;
+}
+
+@media (max-width: 1450px){
+  .vaccination{
+    height: 200px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 1200px){
+  .vaccination{
+    height: 160px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 900px){
+  .vaccination{
+    height: 120px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .vaccination {
+    height: 160px;
+    width: 400px;
+  }
+
+  .rateTitle {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .vaccination {
+    height: 120px;
+    width: 300px;
+  }
+  .rateTitle {
+    font-size: 0.9rem;
+  }
+
+}
+
+
+@media (max-width: 300px) {
+
+  .vaccination {
+    height: 80px;
+    width: 200px;
+  }
+  .rateTitle {
+    font-size: 0.9rem;
+  }
+
+}

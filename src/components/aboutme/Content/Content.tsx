@@ -10,7 +10,7 @@ export interface ContentProps {
 const Content = (props:ContentProps) => {
 
     return (
-        <ul className={classes.contentList}>
+        <ul className={classes.contentList} data-testid='contentList'>
             <Programming onShowModal={props.onShowModal}/>
             <Work onShowModal={props.onShowModal}/>
             <Education onShowModal={props.onShowModal}/>

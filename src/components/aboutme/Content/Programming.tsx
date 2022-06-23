@@ -19,17 +19,17 @@ const Programming = (props: ContentProps) => {
         <span className={classes.textBold}>Technologies: </span>
         <span className={classes.textThin}>
         REACT, Javascript, Typescript, HTML, CSS, Git, Github, Redux<br/>
-        Firebase, REST, Unit-Test, Storybook, Agile Methodology <br/>
+        Firebase, REST, Jest, React Testing Library, Storybook, Agile Methodology <br/>
         </span>
         </span>
 
     const design = <span>
         <span className={classes.textBold}>Design: </span>
-        <span className={classes.textThin}>Photoshop, Indesign, Illustrator, Vectorworks, AutoCAD, C4D</span>
+        <span className={classes.textThin}>Photoshop, Indesign, Illustrator, Vectorworks, AutoCAD, Sketchup, Rhino, Vray, C4D</span>
         </span>
 
     return (
-        <li>
+        <li data-testid='programmingComponent'>
             <div>
                 <div className={classes.theme}>
                     <img className={classes.icon} src={computerIcon} alt="icon"/>
