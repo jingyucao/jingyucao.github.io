@@ -14,22 +14,36 @@ const Vaccination = () => {
             }
             const data = await response.json();
 
+            let vaccinationData = [];
+
             const noVaccination = await Math.abs((1 - data.data.quote) * 100).toFixed(1);
 
             const firstVaccination = await Math.abs(data.data.quote * 100).toFixed(1);
 
+            const secondVaccination = await Math.abs(data.data.secondVaccination.quote * 100).toFixed(1);
+
             const firstBooster = await Math.abs(data.data.boosterVaccination.quote * 100).toFixed(1);
 
+            const secondBooster = await Math.abs(data.data['2ndBoosterVaccination'].quote * 100).toFixed(1);
 
-            console.log(data)
+            const firstAndSecondBoosterDiff = ((+firstBooster) - (+secondBooster)).toFixed(1);
 
-            console.log(noVaccination)
+            const fullVaccinationAndBoosterDiff = ((+secondVaccination) - (+firstBooster)).toFixed(1);
 
-            console.log(firstVaccination)
+            const firstAndSecondVaccinationDiff = ((+firstVaccination) - (+secondVaccination)).toFixed(1);
 
-            console.log(firstBooster)
+            vaccinationData.push({noVaccination: noVaccination},
+                {firstVaccination: firstVaccination},
+                {secondVaccination:secondVaccination},
+                {firstBooster:firstBooster},
+                {secondBooster:secondBooster},
+                {firstAndSecondVaccinationDiff:firstAndSecondVaccinationDiff},
+                {fullVaccinationAndBoosterDiff:fullVaccinationAndBoosterDiff},
+                {firstAndSecondBoosterDiff:firstAndSecondBoosterDiff});
 
-            setVaccinationData(data.data);
+            console.log(vaccinationData);
+
+            setVaccinationData(vaccinationData);
 
         } catch (error: any) {
             console.log(error)

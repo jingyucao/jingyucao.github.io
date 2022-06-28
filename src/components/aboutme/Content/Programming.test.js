@@ -38,5 +38,4 @@ describe('Programming Component', () => {
     // expect(educationCarousel).toBeInTheDocument();
   })
 
-
 })

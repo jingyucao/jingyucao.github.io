@@ -18,32 +18,55 @@ const VaccinationTable = (props: chartProps) => {
     const chartRef = useRef(null) as any;
     let vaccinationChart = null as any;
 
+    // let dataList: any = [
+    //     {name: 'noVaccination', value: props.data[0].noVaccination},
+    //     {name: 'firstVaccination', value: props.data[1].firstVaccination},
+    //     {name: 'secondVaccination', value: props.data[2].secondVaccination},
+    //     {name: 'firstBooster', value: props.data[3].firstBooster},
+    //     {name: 'secondBooster', value: props.data[4].secondVaccination},
+    //     {name: 'firstAndSecondVaccinationDiff', value: props.data[5].firstAndSecondVaccinationDiff},
+    //     {name: 'fullVaccinationAndBoosterDiff', value: props.data[6].fullVaccinationAndBoosterDiff},
+    //     {name: 'firstAndSecondBoosterDiff', value: props.data[7].firstAndSecondBoosterDiff},
+    // ];
+
+    // console.log(dataList)
+
+    console.log(props.data);
+
     const options = {
         tooltip: {
             trigger: 'axis',
             axisPointer: {
-                // Use axis to trigger tooltip
-                type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+                type: 'shadow'
             }
         },
         grid: {
-            top: '5%',
+            top: '10%',
         },
         xAxis: {
             type: 'value'
         },
         yAxis: {
             type: 'category',
-            data: ['']
+            data: [''],
+            axisLine: {
+                show: 'true',
+                lineStyle: {
+                    color: '#fafafa',
+                    width: 1,
+                    // cap: 'square'
+                }
+            },
         },
         series: [
             {
-                name: 'Direct',
+                name: 'secondBooster',
                 type: 'bar',
                 stack: 'total',
                 label: {
                     show: true
                 },
+                color: 'red',
                 emphasis: {
                     focus: 'series'
                 },

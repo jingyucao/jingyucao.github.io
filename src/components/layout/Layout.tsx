@@ -4,9 +4,9 @@ import Navigation from "./Navigation";
 const Layout = (props: any) => {
     return (
         <Fragment>
-            <div>
+            <div data-testid='layoutContainer'>
                 <Navigation/>
-                <div>
+                <div data-testid='layoutBody'>
                     {props.children}
                 </div>
             </div>

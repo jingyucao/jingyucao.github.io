@@ -28,9 +28,9 @@ const CovidData = () => {
                     <Card style={{width: '100%',marginBottom: '1rem'}}>
                         <StatesData/>
                     </Card>
-                    <Card style={{width: '100%',marginBottom: '1rem'}}>
-                        <Vaccination/>
-                    </Card>
+                    {/*<Card style={{width: '100%',marginBottom: '1rem'}}>*/}
+                    {/*    <Vaccination/>*/}
+                    {/*</Card>*/}
                 </div>
             </div>
             <div className={classes.bgColor}/>

@@ -1,8 +1,4 @@
 import {useEffect, useRef} from "react";
-import 'echarts/lib/component/title';
-import 'echarts/lib/component/tooltip';
-import 'echarts/lib/component/grid';
-import 'echarts/lib/chart/line';
 import classes from "./IncidenceRate.module.css";
 
 interface chartProps {

@@ -10,7 +10,7 @@ const Navigation = () => {
     })
 
     return (
-        <header>
+        <header data-testid='layoutHeader'>
             <nav className={classes.nav}>
                 <ul>
                     <li>
