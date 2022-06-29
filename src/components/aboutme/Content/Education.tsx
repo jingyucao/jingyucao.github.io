@@ -5,8 +5,8 @@ import {ContentProps} from "./Content";
 
 const Education = (props: ContentProps) => {
 
-    const Bachelor = <span className={classes.textThin}>Architecture is the art and science of designing and engineering large structures or buildings. <br/>During my Bachelor, both my artistic ability and mathematical proficiency are improved.</span>
-    const Master = <span className={classes.textThin}>During my Master degree at KIT, <br/>my enthusiasm for the larger scales was uncovered.<br/> I decided to study to become a landscape architect.</span>
+    const Bachelor = <span className={classes.textThin}>Architecture is the art and science of designing and engineering buildings. <br/>During my Bachelor's, my ability to design and solve practical problems are improved.</span>
+    const Master = <span className={classes.textThin}>During my Master's degree at KIT, my enthusiasm for the larger scales was uncovered.<br/> I decided to study to become a landscape architect.</span>
 
     return (
 
@@ -21,16 +21,17 @@ const Education = (props: ContentProps) => {
                     </div>
                 </div>
                 <div className={classes.text}>
-                    <span className={classes.textThin}>2007-2012: </span>
-                    <span className={classes.textBold}>Qingdao University of Technology</span>
-                    <br/>
-                    {Bachelor}
-                    <br/>
                     <div style={{marginTop: '0.5rem'}}>
                         <span className={classes.textThin}> 2013-2016: </span>
                         <span className={classes.textBold}> Karlsruhe Institute of Technology (KIT)</span>
                         <br/>
                         {Master}
+                    </div>
+                    <div style={{marginTop: '0.5rem'}}>
+                        <span className={classes.textThin}>2007-2012: </span>
+                        <span className={classes.textBold}>Qingdao University of Technology</span>
+                        <br/>
+                        {Bachelor}
                     </div>
                 </div>
             </div>

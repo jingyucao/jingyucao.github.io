@@ -6,7 +6,7 @@ import {ContentProps} from "./Content";
 const Work = (props: ContentProps) => {
 
     const loidlIntroduction = <span className={classes.textThin}>Atelier Loidl Landscape Architects made a name for itself with several famous projects, <br/>including Gleisdreieck in Berlin and Baakenpark in Hamburg. <br/>I work as a project team member and a junior project manager. </span>
-    const a24Introduction = <span className={classes.textThin}>A24 Landscape has been designing different scales projects, <br/>range from urban development concepts to parks, squares and gardens.<br/> I worked as a project team member.</span>
+    const a24Introduction = <span className={classes.textThin}>A24 Landscape has been designing different scales projects, <br/>ranging from urban development concepts to parks, squares and gardens.<br/> I worked as a project team member.</span>
 
     return (
         <li data-testid='workComponent'>

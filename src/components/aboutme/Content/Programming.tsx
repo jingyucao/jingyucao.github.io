@@ -9,7 +9,7 @@ const Programming = (props: ContentProps) => {
         <span className={classes.textThin}>Hey, Nice to meet you! I am </span>
         <span className={classes.textBold}>Jingyu Cao. <br/></span>
         <span className={classes.textThin}>I am a </span>
-        <span className={classes.textBold}>Self-taught Frontend Developer</span>
+        <span className={classes.textBold}>Frontend Developer</span>
         <span className={classes.textThin}> and a Landscape Architect. <br/>
             I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.<br/>
         </span>
@@ -18,7 +18,7 @@ const Programming = (props: ContentProps) => {
     const technologies = <span>
         <span className={classes.textBold}>Technologies: </span>
         <span className={classes.textThin}>
-        REACT, Javascript, Typescript, HTML, CSS, Git, Github, Redux<br/>
+        REACT, Javascript, Typescript, HTML5, CSS3, CSS Modules, Git, Github, ESLint, Prettier<br/>
         Firebase, REST, Jest, React Testing Library, Storybook, Agile Methodology <br/>
         </span>
         </span>
