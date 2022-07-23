@@ -35,7 +35,7 @@ const Education = (props: ContentProps) => {
                     </div>
                 </div>
             </div>
-            <div className={classes.action}>
+            <div className={classes.action} style={{visibility: 'hidden'}}>
                 <DetailButton type='button'
                               onClick={props.onShowModal}
                               id='EducationDetails'/>

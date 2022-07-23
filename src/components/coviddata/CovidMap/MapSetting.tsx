@@ -62,8 +62,8 @@ const MapSetting = (props: mapProps) => {
             }
         },
         visualMap: {
-            min: 20000,
-            max: 40000,
+            min: 30000,
+            max: 45000,
             realtime: true,
             calculable: true,
             color: ['#409ebd', '#e0f2c2'],

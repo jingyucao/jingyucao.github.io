@@ -6,6 +6,7 @@ interface Props {
     id?: string;
     onClick?: MouseEventHandler;
     className?: string;
+    style?:object
 }
 
 const DetailButton: React.FC<Props> = (props) => {
